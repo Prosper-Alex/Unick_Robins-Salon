@@ -1,0 +1,97 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.btn {
+  color: $accent-color;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.03em;
+
+  @include sm-fsz;
+}
+
+.btn-default {
+  @include sm-fsz;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.03em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.btn-2 {
+  font-family: $primary-font;
+  padding: 1.2rem 1.6rem;
+  border-radius: 6px;
+  @include sm-fsz;
+  color: $default-background-color;
+}
+
+.btn--transparent {
+  @extend .btn-2;
+  background-color: $default-background-color;
+  border: 1px solid $default-color;
+  padding: 0.8rem 1.2rem;
+  color: $default-color;
+  transition: 500ms ease, border 500ms ease;
+}
+
+.btn--transparent:hover {
+  @extend .btn-2;
+  background-color: $default-color;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  color: #fff;
+  transition: transform all 500ms ease, border 500ms ease;
+}
+
+.btn-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem 1.2rem 0.8rem 1.2rem;
+}
+
+.navigation__nav--item:link,
+.navigation__nav--item:visited {
+  display: inline-block;
+  transition: all 500ms ease;
+}
+
+.navigation__nav--item:hover,
+.navigation__nav--item:active {
+  border-radius: 6px;
+}
+
+.cta {
+  font-family: $primary-font;
+  font-size: 1.4rem;
+}
+
+.color-tx {
+  // color: $accent-color;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.03em;
+}
+.color-tx--rm {
+  // color: $accent-color;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.03em;
+
+  padding: 0.7rem;
+  border-radius: $border-radius-rm;
+}
+
+.color-tx--sm {
+  // color: $accent-color;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.03em;
+}

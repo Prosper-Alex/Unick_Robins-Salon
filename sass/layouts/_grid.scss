@@ -1,0 +1,74 @@
+@use "../abstracts/mixins" as *;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8.6rem;
+  align-content: center;
+  justify-content: center;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16.4rem;
+  align-content: center;
+  justify-content: center;
+  @include tab-land {
+    gap: 8rem;
+  }
+  @include tab-port {
+    gap: 4rem;
+  }
+  @include phone {
+    gap: 1rem;
+  }
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-content: center;
+  justify-content: center;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-content: center;
+  justify-content: center;
+  gap: 3.2rem;
+  // grid-auto-rows: 34rem;
+  @include sm-desktop {
+    gap: 2rem;
+  }
+  @include tab-port {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  @mixin grid--3--cols {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.grid-5 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-content: center;
+  justify-content: center;
+  gap: 3.2rem;
+  // grid-auto-rows: 34rem;
+
+  @include sm-desktop {
+    gap: 2rem;
+  }
+  @include tab-port {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  @mixin grid--3--cols {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

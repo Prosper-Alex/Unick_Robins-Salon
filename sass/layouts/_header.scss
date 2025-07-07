@@ -1,0 +1,6 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.main-header {
+  background-color: $default-background-color;
+}

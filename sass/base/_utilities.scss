@@ -1,0 +1,148 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.center-children--bg {
+  padding-left: 8vw !important;
+  padding-right: 8vw !important;
+
+  @include tab-land() {
+    padding-left: 6vw !important;
+    padding-right: 6vw !important;
+  }
+}
+
+.center-children--sm {
+  padding-left: 4vw !important;
+  padding-right: 4vw !important;
+}
+
+.content-btn {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  @include tab-port {
+    justify-content: center;
+    margin-top: 3rem;
+  }
+
+  @include medium-phone {
+    gap: 1rem;
+  }
+
+  @include small-phone {
+    gap: 0.6rem;
+  }
+}
+
+.white {
+  color: white;
+}
+
+.accent-color {
+  color: $accent-color;
+}
+
+.black-bg {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin: 4rem 0;
+  border: none;
+  letter-spacing: 0.5px;
+  padding: 1.4rem 2.4rem;
+  display: inline-block;
+
+  box-shadow: $btn-shadow;
+  color: $default-background-color;
+  background-color: $default-color;
+  border-radius: $border-radius-rm;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.black-bg:active {
+  transform: translateY(2px);
+  box-shadow: $btn-shadow--clicked;
+}
+
+.black-bg:hover {
+  transform: translateY(-2px);
+  box-shadow: $btn-shadow--hover;
+}
+
+.dark-bg {
+  box-shadow: $black-shadow;
+  background-color: $default-color;
+  border-radius: $border-radius-rm;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dark-bg:active {
+  transform: translateY(2px);
+  box-shadow: $black-shadow--clicked;
+}
+
+.dark-bg:hover {
+  transform: translateY(-2px);
+  box-shadow: $black-shadow-hover;
+}
+
+.light-shadow {
+  box-shadow: $btn-shadow;
+  background-color: $default-color;
+  border-radius: $border-radius-rm;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.light-shadow:hover {
+  transform: translateY(-2px);
+  box-shadow: $btn-shadow--hover;
+}
+
+.light-shadow:active {
+  transform: translateY(2px);
+  box-shadow: $btn-shadow--clicked;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.davvy-grey {
+  color: $davys-grey;
+}
+
+// Footer
+// This file contains styles for the footer section of the website.
+
+// .footer {
+//   margin: 15rem 0 5rem 0;
+//   &_wrapper {
+//     padding: 3rem 0;
+//   }
+
+//   &_content {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+
+//     @include phone {
+//       flex-direction: column;
+//       align-items: center;
+//     }
+//     .footer-head {
+//       font-size: 2.4rem;
+//       font-weight: 700;
+//       text-transform: capitalize;
+//       letter-spacing: 0.5rem;
+//       cursor: pointer;
+
+//       @include tab-port {
+//         font-size: 3.2rem;
+//       }
+
+//       @include phone {
+//         margin-bottom: 2rem;
+//       }
+//     }
+//   }
+// }

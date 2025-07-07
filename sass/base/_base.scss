@@ -1,0 +1,50 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: $default-background-color;
+  color: $default-color;
+  font-family: $primary-font;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+// h1,
+// h2,
+// h3 {
+//   font-family: $primary-font;
+// }
+
+a {
+  text-decoration: none;
+  color: $default-color;
+}
+
+li {
+  list-style: none;
+}
+button {
+  border: none;
+  background-color: transparent;
+}
+
+p,
+span {
+  font-family: $primary-font;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}

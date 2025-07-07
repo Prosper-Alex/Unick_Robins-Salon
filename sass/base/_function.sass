@@ -1,0 +1,9 @@
+@function generate-background-color($index)
+ $colors: (#E8F2EE,#F1DFDF,#DFE1F1,#F8F8F8,#DFEBF1,#F8F8F8)
+ @return nth($colors,$index + 1)
+
+@for $i from 1 through 5
+ .card-#{$i}
+    background-color:  generate-background-color($i)
+    
+ 

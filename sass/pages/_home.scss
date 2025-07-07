@@ -1,0 +1,74 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.header {
+  &_wrapper {
+    margin: 6rem 0 15rem 0;
+  }
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .paragraph.text-pb {
+      display: flex;
+
+      @include phone {
+        display: none;
+      }
+    }
+
+    .paragraph.sm {
+      width: 60%;
+
+      @include phone {
+        width: 90%;
+      }
+
+      @include medium-phone {
+        width: 100%;
+        font-size: 1.4rem;
+      }
+    }
+
+    @include bg-desktop {
+      animation: moveinBottom 1s ease-out;
+    }
+
+    .heading-secondary.md {
+      margin-bottom: 0.7rem;
+    }
+
+    .heading-tertiary {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &_image {
+    height: 20vh;
+    width: 20vh;
+    margin: 4rem 0;
+
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &--btn {
+    display: flex;
+    width: 100%;
+
+    &:hover {
+      color: $default-color;
+      transition: all 0.3s ease-in-out;
+    }
+    @include big-phone {
+      width: 100%;
+    }
+  }
+}

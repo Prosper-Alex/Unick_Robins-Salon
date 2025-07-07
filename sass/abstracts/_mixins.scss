@@ -1,0 +1,215 @@
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin gap {
+  gap: 1.6rem;
+}
+
+@mixin flex-reverse {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin padCenter {
+  padding-left: 24rem;
+  padding-right: 24rem;
+
+  @include bg-desktop() {
+    padding-left: 20vw;
+    padding-right: 20vw;
+  }
+
+  @include sm-desktop {
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }
+
+  @include tab-port {
+    padding-right: 10vw;
+    padding-left: 10vw;
+  }
+  @include big-phone() {
+    padding-right: 6vw;
+    padding-left: 6vw;
+  }
+  @include small-phone {
+    padding-right: 3vw;
+    padding-left: 3vw;
+  }
+}
+
+@mixin sm-fsz {
+  font-size: 1.8rem;
+
+  @include sm-desktop() {
+    font-size: 1.4rem;
+  }
+}
+
+@mixin lg-fsz {
+  font-size: 8rem;
+
+  @include sm-desktop() {
+    font-size: 7rem;
+  }
+  @include tab-port() {
+    font-size: 5rem;
+  }
+}
+@mixin rlg--fsz {
+  font-size: 6.4rem;
+
+  @include sm-desktop() {
+    font-size: 7rem;
+  }
+  @include tab-port() {
+    font-size: 5rem;
+  }
+  @include big-phone() {
+    font-size: 4rem;
+  }
+}
+
+@mixin MD-fsz {
+  font-size: 8rem;
+
+  @include sm-desktop() {
+    font-size: 7rem;
+  }
+}
+@mixin padTop {
+  margin-top: 16rem;
+  @include sm-desktop() {
+    margin-top: 12rem;
+  }
+  @include tab-land() {
+    margin-top: 10rem;
+  }
+  @include tab-port() {
+    margin-top: 6rem;
+  }
+  @include big-phone() {
+    margin-top: 12rem;
+  }
+}
+
+// @mixin pad{
+//   padding-right: 6vw;
+//   padding-left: 6vw;
+
+//   @include small-phone {
+//     padding-right: 3vw;
+//     padding-left: 3vw;
+//   }
+// }
+
+// Media Queries
+/*
+      0 - 400px: 	Small Phone
+      400 - 600px: 	Phone
+      600 - 760px: 	Big Phone
+      760 - 900px: 	Tablet Portrait
+      900 - 1200px: 	Tablet Landscape
+      [1200 - 1800px] Normal styles apply
+      1800px + :	Big Desktop
+  
+      $breakpoint options
+      - sm-phone
+      - phone
+      - big-phone
+      - tab-port
+      - tab-land
+      - big-desktop
+  
+      1em = 16px
+  */
+
+$breakpoints: (
+  "small-phone": 25em,
+  // 400px
+  "medium-phone": 32em,
+  // 500px
+  "phone": 37.5rem,
+  // 600px
+  "big-phone": 47em,
+  // 752px
+  "tab-port": 56.25em,
+  // 900px
+  "tab-land--sm": 65em,
+  // 1040px
+  "tab-land": 75em,
+  // 1200px
+  "sm-desktop": 93.8em,
+  // 1500px
+  "bg-desktop": 112.5em,
+  // 1800px
+  "xl-desktop": 140.5em,
+  // 2250px
+);
+
+@mixin small-phone {
+  @media (max-width: map-get($breakpoints, "small-phone")) {
+    @content;
+  }
+}
+@mixin medium-phone {
+  @media (max-width: map-get($breakpoints, "medium-phone")) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: map-get($breakpoints, "phone")) {
+    @content;
+  }
+}
+
+@mixin big-phone {
+  @media (max-width: map-get($breakpoints, "big-phone")) {
+    @content;
+  }
+}
+
+@mixin tab-port {
+  @media (max-width: map-get($breakpoints, "tab-port")) {
+    @content;
+  }
+}
+
+@mixin tab-land {
+  @media (max-width: map-get($breakpoints, "tab-land")) {
+    @content;
+  }
+}
+
+@mixin tab-land--sm {
+  @media (max-width: map-get($breakpoints, "tab-land--sm")) {
+    @content;
+  }
+}
+
+@mixin sm-desktop {
+  @media (max-width: map-get($breakpoints, "sm-desktop")) {
+    @content;
+  }
+}
+@mixin bg-desktop {
+  @media (min-width: map-get($breakpoints, "bg-desktop")) {
+    @content;
+  }
+}
+@mixin xl-desktop {
+  @media (min-width: map-get($breakpoints, "xl-desktop")) {
+    @content;
+  }
+}
