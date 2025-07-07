@@ -26,21 +26,19 @@
   padding: 1.2rem 1.6rem;
   border-radius: 6px;
   @include sm-fsz;
-  color: $default-background-color;
 }
 
 .btn--transparent {
   @extend .btn-2;
-  background-color: $default-background-color;
-  border: 1px solid $default-color;
+
   padding: 0.8rem 1.2rem;
-  color: $default-color;
+
   transition: 500ms ease, border 500ms ease;
 }
 
 .btn--transparent:hover {
   @extend .btn-2;
-  background-color: $default-color;
+
   border: none;
   padding: 0.8rem 1.2rem;
   color: #fff;

@@ -53,8 +53,7 @@
   display: inline-block;
 
   box-shadow: $btn-shadow;
-  color: $default-background-color;
-  background-color: $default-color;
+
   border-radius: $border-radius-rm;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -71,7 +70,7 @@
 
 .dark-bg {
   box-shadow: $black-shadow;
-  background-color: $default-color;
+
   border-radius: $border-radius-rm;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -88,7 +87,7 @@
 
 .light-shadow {
   box-shadow: $btn-shadow;
-  background-color: $default-color;
+
   border-radius: $border-radius-rm;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -108,7 +107,6 @@
 }
 
 .davvy-grey {
-  color: $davys-grey;
 }
 
 // Footer
