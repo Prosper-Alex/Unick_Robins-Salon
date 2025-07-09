@@ -10,12 +10,42 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
       rel="stylesheet" />
 
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
     <main class="main-header">
-      <nav class="navigation"></nav>
+      <nav class="navigation center-children--sm" data-aos="fade-down">
+        <input type="checkbox" id="checkbox" />
+
+        <ul class="nav_lists">
+          <li class="nav-item"><a href="#home">Home</a></li>
+          <li class="nav-item"><a href="#about">About</a></li>
+          <li class="nav-item"><a href="#projects">Projects</a></li>
+          <li class="nav-item"><a href="#contact">Contact</a></li>
+        </ul>
+
+        <label class="nav_toggle" for="checkbox">
+          <span class="open"><ion-icon name="menu"></ion-icon></span>
+          <span class="close"><ion-icon name="close"></ion-icon></span
+        ></label>
+
+        <figure class="nav_logo">
+          <img src="./assets/logo/logo.jpeg" alt=" Logo" />
+        </figure>
+
+        <ul class="nav_lists">
+          <li class="nav-item"><a href="#home">Home</a></li>
+          <li class="nav-item"><a href="#about">About</a></li>
+          <li class="nav-item"><a href="#projects">Projects</a></li>
+          <li class="nav-item"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
       <header class="header"></header>
     </main>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>
