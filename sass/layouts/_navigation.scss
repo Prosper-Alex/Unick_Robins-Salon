@@ -13,7 +13,7 @@
   cursor: pointer;
   gap: 7rem;
 
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
 
   backface-visibility: hidden;
 
@@ -63,7 +63,7 @@
     gap: 4rem;
     align-items: center;
     font-size: 1.6rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 
     @include tab-port {
       position: fixed;
