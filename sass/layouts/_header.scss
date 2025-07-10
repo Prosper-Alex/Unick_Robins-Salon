@@ -2,4 +2,80 @@
 @use "../abstracts/mixins" as *;
 
 .main-header {
+  .header {
+    height: 87vh;
+    padding-top: 5rem;
+    position: relative;
+
+    @include tab-port {
+      height: 60vh;
+    }
+
+    .textbox {
+      position: absolute;
+      top: 50%;
+      left: 10vw;
+      transform: translateY(-50%);
+      z-index: 2;
+
+      @include tab-port {
+        left: 5vw;
+      }
+
+      @include phone {
+        top: 55%;
+
+        h1 {
+          font-size: 4rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+      background-color: #333;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .swiper-pagination-bullet {
+      background: rgba($white, 0.5);
+      width: 1rem;
+      height: 1rem;
+      border-radius: 0.5rem;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: rgba($white, 0.8);
+      width: 5rem;
+      height: 1rem;
+      border-radius: 0.5rem;
+    }
+  }
 }
