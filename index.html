@@ -12,7 +12,7 @@
 
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+      href="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="./css/main.css" />
   </head>
@@ -51,23 +51,21 @@
           </h1>
           <a href="#" class="btn btn--primary">Learn More</a>
         </div>
-        <div class="header_image-wrapper swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="overlay"></div>
-              <img src="/assets/img/hero-1.jpeg" alt="Slider Image" />
-            </div>
-            <div class="swiper-slide">
-              <div class="overlay"></div>
-              <img src="./assets/img/hero-2.jpeg" alt="Slider Image" />
-            </div>
-            <div class="swiper-slide">
-              <div class="overlay"></div>
-              <img src="./assets/img/hero-3.jpeg" alt="Slider Image" />
-            </div>
-            <div class="swiper-slide">
-              <div class="overlay"></div>
-              <img src="./assets/img/hero-4.jpeg" alt="Slider Image" />
+        <div class="header_image--wrapper">
+          <div class="header_wrap swiper">
+            <div class="swiper-wrapper">
+              <div class="header-img swiper-slide">
+                <img src="/assets/img/hero-1.jpeg" alt="Slider Image" />
+              </div>
+              <div class="header-img swiper-slide">
+                <img src="./assets/img/hero-2.jpeg" alt="Slider Image" />
+              </div>
+              <div class="header-img swiper-slide">
+                <img src="./assets/img/hero-3.jpeg" alt="Slider Image" />
+              </div>
+              <div class="header-img swiper-slide">
+                <img src="./assets/img/hero-4.jpeg" alt="Slider Image" />
+              </div>
             </div>
           </div>
           <div class="swiper-pagination"></div>
@@ -79,7 +77,8 @@
         </div>
       </header>
     </main>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </body>
 </html>

@@ -3,21 +3,17 @@
 
 // Navigation
 .navigation {
-  position: static;
-  font-family: $primary-font;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  padding: 1.5rem 2rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  font-weight: 700;
-  padding: 2.4rem 0;
-  text-transform: capitalize;
-  letter-spacing: 0%;
-  cursor: pointer;
-  gap: 7rem;
-
-  background-color: rgba(0, 0, 0, 0.9);
-
-  backface-visibility: hidden;
+  font-family: $primary-font;
 
   @include bg-desktop {
     animation: moveinBottom 1s ease-out;
