@@ -11,8 +11,9 @@
   backdrop-filter: blur(6px);
   padding: 1.5rem 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 7rem;
   font-family: $primary-font;
 
   @include bg-desktop {

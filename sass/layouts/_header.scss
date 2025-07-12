@@ -1,11 +1,8 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-@use "../abstracts/variables" as *;
-@use "../abstracts/mixins" as *;
-
 .header {
-  height: 70vh;
+  height: 100vh;
   width: 100%;
   padding: 0;
   position: relative;
@@ -77,6 +74,25 @@
     .swiper-button-prev,
     .swiper-scrollbar {
       z-index: 5;
+    }
+
+    .swiper-pagination-bullet {
+      background-color: hsl(212, 32%, 40%);
+      opacity: 0.7;
+      transition: background-color 0.3s ease;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: hsl(212, 70%, 60%);
+      opacity: 1;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      background-color: $accent-color;
+      transition: color 0.3s ease;
+      color: $secondary-color;
+      padding: 1rem 2rem;
     }
   }
 }
