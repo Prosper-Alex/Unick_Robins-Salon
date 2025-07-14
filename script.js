@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   new Swiper(".header_wrap", {
     loop: true,
     autoplay: {

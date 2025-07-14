@@ -139,8 +139,6 @@
             border-radius: $border-radius-rm;
             transition: all 0.2s ease;
 
-            &:hover {
-            }
             &:active {
               transform: translateY(1px);
               box-shadow: $btn-shadow--clicked;
@@ -164,8 +162,9 @@
       padding: 1rem 2rem;
     }
 
-    .nav_item {
+    .nav-item {
       font-size: 1.6rem;
+      text-transform: uppercase;
     }
 
     .pb {
