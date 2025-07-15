@@ -152,39 +152,39 @@
         }
       }
 
-      .nav-item {
-        position: relative;
-        cursor: pointer;
-        transition: color 0.3s ease;
-
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: -4px;
-          left: 0;
-          width: 100%;
-          height: 2px;
-          background-color: $accent-color;
-          transform: scaleX(0);
-          transform-origin: right;
-          transition: transform 0.3s ease;
-        }
-
-        &:hover {
-          color: $accent-color;
-
-          &::after {
-            transform: scaleX(1);
-            transform-origin: left;
-          }
-        }
-      }
-
       .pb {
         display: none;
 
         @include tab-port {
           display: flex;
+        }
+      }
+    }
+
+    .nav-item {
+      position: relative;
+      cursor: pointer;
+      transition: color 0.3s ease;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $accent-color;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        color: $accent-color;
+
+        &::after {
+          transform: scaleX(1);
+          transform-origin: left;
         }
       }
     }

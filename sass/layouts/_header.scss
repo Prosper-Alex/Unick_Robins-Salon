@@ -16,21 +16,39 @@
     rgba(10, 10, 10, 0.7)
   );
 
+  @include big-phone {
+    .header {
+      height: 100vh;
+    }
+  }
+
   .textbox {
     position: relative;
     z-index: 10;
     color: white;
     padding-left: 10vw;
 
+    @include big-phone {
+      .textbox {
+        padding-left: 5vw;
+      }
+    }
+
     h1 {
       font-size: 4rem;
       line-height: 1.2;
       margin-bottom: 2rem;
+
+      @include big-phone {
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
     }
 
     a.btn {
       font-size: 1.4rem;
-      padding: 0.8rem 1.6rem;
+      padding: 1rem 2rem;
     }
 
     @include tab-port {
@@ -189,16 +207,56 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  .header {
-    height: 100vh;
+.header_info {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
 
-    .textbox {
-      padding-left: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
 
-      h1 {
-        font-size: 2.5rem;
-      }
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+
+  @include tab-port {
+    flex-direction: column;
+    gap: 2rem;
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .info-location,
+  .info-contact,
+  .info-schedule {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: $white;
+
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    ion-icon {
+      font-size: 2.4rem;
+      color: blue;
+    }
+  }
+
+  @include phone {
+    gap: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+
+    .info-location,
+    .info-contact,
+    .info-schedule {
+      justify-content: center;
     }
   }
 }
