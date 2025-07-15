@@ -31,6 +31,10 @@ html {
 a {
   text-decoration: none;
   color: $secondary-color;
+
+  @include tab-port {
+    color: $white;
+  }
 }
 
 li {

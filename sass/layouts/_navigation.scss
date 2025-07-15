@@ -63,14 +63,16 @@
     align-items: center;
     font-size: 1.6rem;
     letter-spacing: 0.5px;
+    color: $white;
 
     @include tab-port {
       position: fixed;
       top: 0;
       right: 0;
-      z-index: 100;
-      background-color: rgba(193, 154, 107, 0.7);
+      z-index: 110;
+      background-color: rgba(193, 154, 107, 0.3);
       backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       height: 100vh;
       flex-direction: column;
       width: min(100vw, 30rem);
@@ -154,12 +156,6 @@
           transform: translateY(0);
           pointer-events: auto;
         }
-      }
-    }
-
-    .nav_right {
-      @include tab-port {
-        display: none;
       }
     }
 
