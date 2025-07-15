@@ -11,7 +11,7 @@
   backdrop-filter: blur(6px);
   padding: 1.5rem 2rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 7rem;
   font-family: $primary-font;
@@ -44,11 +44,6 @@
     height: 7rem;
     width: 7rem;
 
-    @include tab-port {
-      display: flex;
-      align-items: flex-start;
-    }
-
     img {
       width: 100%;
       height: 100%;
@@ -62,7 +57,7 @@
     }
   }
 
-  .nav_lists {
+  .nav_left .nav_lists {
     display: flex;
     gap: 4rem;
     align-items: center;
@@ -74,8 +69,8 @@
       top: 0;
       right: 0;
       z-index: 100;
-      background-color: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(3px);
+      background-color: rgba(193, 154, 107, 0.7);
+      backdrop-filter: blur(6px);
       height: 100vh;
       flex-direction: column;
       width: min(100vw, 30rem);
@@ -162,14 +157,43 @@
       }
     }
 
+    .nav_right {
+      @include tab-port {
+        display: none;
+      }
+    }
+
     .nav_item-wrapper.bg {
       border-radius: $border-radius-rm;
       padding: 1rem 2rem;
     }
 
     .nav-item {
-      font-size: 1.6rem;
-      text-transform: uppercase;
+      position: relative;
+      cursor: pointer;
+      transition: color 0.3s ease;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $accent-color;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+
+      &:hover {
+        color: $accent-color;
+      }
     }
 
     .pb {
@@ -184,14 +208,10 @@
   .nav_lists li {
     font-weight: 500;
     transition: all 0.3s ease-in-out;
-
-    &:hover,
-    &:active {
-    }
   }
 
   @include tab-port {
-    #checkbox:checked ~ .nav_lists {
+    #checkbox:checked ~ .nav_left .nav_lists {
       transform: translateX(0);
     }
   }
@@ -203,6 +223,7 @@
 
     @include tab-port {
       position: fixed;
+      top: 3rem;
       right: 0;
       display: flex;
       font-size: 2.4rem;
@@ -225,11 +246,11 @@
   }
 
   @include phone {
-    #checkbox:checked ~ .nav_toggle span.open {
+    #checkbox:checked ~ .nav_right .nav_toggle span.open {
       display: none;
     }
 
-    #checkbox:checked ~ .nav_toggle span.close {
+    #checkbox:checked ~ .nav_right .nav_toggle span.close {
       display: flex;
     }
   }
