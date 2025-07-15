@@ -175,6 +175,10 @@
       text-align: center;
       width: 70%;
       margin: 2rem auto;
+
+      @include medium-phone {
+        width: 90%;
+      }
     }
 
     a.btn {
@@ -186,6 +190,10 @@
       border-radius: $border-radius-rm;
       transition: all 0.3s ease;
       margin: 3rem 0;
+
+      @include phone {
+        margin: 1.5rem 0;
+      }
 
       &:hover {
         transform: scale(1.05);

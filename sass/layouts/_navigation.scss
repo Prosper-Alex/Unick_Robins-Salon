@@ -20,6 +20,10 @@
     animation: moveinBottom 1s ease-out;
   }
 
+  @include medium-phone {
+    padding: 0.7rem 1.2rem;
+  }
+
   .main-nav--wrapper {
     display: flex;
     align-items: center;
@@ -54,6 +58,12 @@
     @include tab-port {
       font-size: 3.2rem;
       margin-left: 2rem;
+    }
+
+    @include medium-phone {
+      height: 5.5rem;
+      width: 5.5rem;
+      margin-left: 1rem;
     }
   }
 
@@ -219,6 +229,10 @@
       padding: 1rem 2rem;
       border: 1.5px solid #777;
       border-radius: $border-radius-sm;
+    }
+
+    @include medium-phone {
+      top: 1rem;
     }
 
     span.open {
