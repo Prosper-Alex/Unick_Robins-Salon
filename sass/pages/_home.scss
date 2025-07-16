@@ -6,13 +6,17 @@
 .about {
   margin: 15rem 0;
   &_wrapper {
-    // display: grid;
-    // grid-template-columns: repeat(2, 1fr);
-    // gap: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5rem;
+    width: 100%;
+
+    @include tab-port {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &_content {
@@ -25,6 +29,10 @@
       .paragraph.bg {
         width: 70%;
         margin: 1.4rem 0;
+
+        @include tab-port {
+          margin: 1.4rem auto;
+        }
       }
 
       a.btn {
@@ -38,13 +46,25 @@
         margin: 3rem 0;
         width: fit-content;
 
+        @include tab-port {
+          margin: 3rem auto; // center the button horizontally
+        }
+
         @include phone {
-          margin: 1.5rem 0;
+          margin: 1.5rem auto;
         }
 
         &:hover {
+          transform: translateY(-5px);
+          box-shadow: $btn-shadow--hover;
+          box-shadow: $btn-shadow;
           transform: scale(1.05);
           background-color: darken($accent-color, 10%);
+        }
+
+        &:active {
+          transform: translateY(5px);
+          box-shadow: $btn-shadow--clicked;
         }
       }
     }
@@ -56,6 +76,13 @@
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
     gap: 3rem;
+
+    @include phone {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2rem;
+      width: 100%;
+    }
   }
 
   &_img {
