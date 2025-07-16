@@ -230,6 +230,7 @@
   backdrop-filter: blur(6px);
   padding: 1rem 2rem;
   border-radius: 1rem;
+  width: 70%;
 
   @include tab-land {
     width: 100%;
