@@ -1,2 +1,84 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/variables" as *;
+
+//  ABOUT SECTION
+
+.about {
+  margin: 15rem 0;
+  &_wrapper {
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    // gap: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  &_content {
+    flex: 1;
+    .textbox {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .paragraph.bg {
+        width: 70%;
+        margin: 1.4rem 0;
+      }
+
+      a.btn {
+        display: inline-block;
+        font-size: 1.6rem;
+        padding: 1rem 2.4rem;
+        background-color: $accent-color;
+        color: $white;
+        border-radius: $border-radius-rm;
+        transition: all 0.3s ease;
+        margin: 3rem 0;
+        width: fit-content;
+
+        @include phone {
+          margin: 1.5rem 0;
+        }
+
+        &:hover {
+          transform: scale(1.05);
+          background-color: darken($accent-color, 10%);
+        }
+      }
+    }
+  }
+
+  &_image {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 3rem;
+  }
+
+  &_img {
+    height: 60vh;
+    width: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: $btn-shadow--hover;
+      box-shadow: $btn-shadow;
+      border-radius: $border-radius-rm;
+    }
+
+    &:active {
+      transform: translateY(5px);
+      box-shadow: $btn-shadow--clicked;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius: $border-radius-rm;
+    }
+  }
+}
