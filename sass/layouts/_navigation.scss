@@ -8,7 +8,7 @@
   z-index: 20;
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px); // For Safari
+  -webkit-backdrop-filter: blur(6px); // Safari support
   padding: 1.5rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -84,12 +84,18 @@
       width: min(100vw, 40rem);
       flex-direction: column;
       justify-content: center;
-      background-color: rgba(193, 154, 107, 0.3);
+      background-color: rgba(
+        193,
+        154,
+        107,
+        0.5
+      ); // semi-transparent for visible blur
       backdrop-filter: blur(6px);
       -webkit-backdrop-filter: blur(6px);
       transform: translateX(100%);
       transition: transform 0.3s ease;
       gap: 3rem;
+      padding: 2rem;
     }
 
     .nav_item-wrapper {
@@ -199,6 +205,7 @@
       }
     }
   }
+
   .nav_lists li {
     font-weight: 500;
     transition: all 0.3s ease-in-out;
@@ -208,7 +215,8 @@
     #checkbox:checked ~ .nav_left .nav_lists {
       transform: translateX(0);
       opacity: 1;
-      backdrop-filter: blur(3px);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
     }
   }
 
@@ -241,17 +249,6 @@
 
     span.close {
       display: none;
-    }
-
-    @include phone {
-      #checkbox:checked ~ .nav_left .nav_toggle {
-        span.open {
-          display: none;
-        }
-        span.close {
-          display: flex;
-        }
-      }
     }
 
     .nav_actions {
