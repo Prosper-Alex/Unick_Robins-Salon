@@ -19,7 +19,7 @@ window.addEventListener("load", () => {
   });
 });
 
-let swiperCard = new Swiper(".card__content", {
+let swiperCard = new Swiper(".service_image--wrapper", {
   loop: true,
   spaceBetween: 32,
   grabCursor: true,
@@ -46,6 +46,9 @@ let swiperCard = new Swiper(".card__content", {
     },
     968: {
       slidesPerView: 3,
+    },
+    1400: {
+      slidesPerView: 4,
     },
   },
 });
