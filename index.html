@@ -22,84 +22,81 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <main class="main-header">
-      <nav class="navigation center-children--sm" data-aos="fade-down">
-        <input type="checkbox" id="checkbox" />
-        <figure class="nav_logo">
-          <img src="./assets/logo/logo.jpeg" alt="Logo" />
-        </figure>
+    <nav class="navigation center-children--sm" data-aos="fade-down">
+      <input type="checkbox" id="checkbox" />
+      <figure class="nav_logo">
+        <img src="./assets/logo/logo.jpeg" alt="Logo" />
+      </figure>
 
-        <div class="nav_left">
-          <ul class="nav_lists">
-            <li class="nav-item"><a href="#home">Home</a></li>
-            <li class="nav-item"><a href="#about">About Us</a></li>
-            <li class="nav-item"><a href="#projects">Services</a></li>
-            <li class="nav-item"><a href="#appointment">Appointment</a></li>
-          </ul>
+      <div class="nav_left">
+        <ul class="nav_lists">
+          <li class="nav-item"><a href="#home">Home</a></li>
+          <li class="nav-item"><a href="#about">About Us</a></li>
+          <li class="nav-item"><a href="#projects">Services</a></li>
+          <li class="nav-item"><a href="#appointment">Appointment</a></li>
+        </ul>
 
-          <label class="nav_toggle" id="nav-toggle" for="checkbox">
-            <span class="open"><ion-icon name="menu"></ion-icon></span>
-            <span class="close none"><ion-icon name="close"></ion-icon></span>
-          </label>
-        </div>
-      </nav>
+        <label class="nav_toggle" id="nav-toggle" for="checkbox">
+          <span class="open"><ion-icon name="menu"></ion-icon></span>
+          <span class="close none"><ion-icon name="close"></ion-icon></span>
+        </label>
+      </div>
+    </nav>
 
-      <header class="header">
-        <div class="header_image--wrapper">
-          <div class="header_wrap swiper">
-            <div class="swiper-wrapper">
-              <div class="header-img swiper-slide">
-                <img src="/assets/img/hero-1.jpeg" alt="Slider Image" />
-              </div>
-              <div class="header-img swiper-slide">
-                <img src="./assets/img/hero-2.jpeg" alt="Slider Image" />
-              </div>
-              <div class="header-img swiper-slide">
-                <img src="./assets/img/hero-3.jpeg" alt="Slider Image" />
-              </div>
-              <div class="header-img swiper-slide">
-                <img src="./assets/img/hero-4.jpeg" alt="Slider Image" />
-              </div>
+    <header class="header">
+      <div class="header_image--wrapper">
+        <div class="header_wrap swiper">
+          <div class="swiper-wrapper">
+            <div class="header-img swiper-slide">
+              <img src="/assets/img/hero-1.jpeg" alt="Slider Image" />
+            </div>
+            <div class="header-img swiper-slide">
+              <img src="./assets/img/hero-2.jpeg" alt="Slider Image" />
+            </div>
+            <div class="header-img swiper-slide">
+              <img src="./assets/img/hero-3.jpeg" alt="Slider Image" />
+            </div>
+            <div class="header-img swiper-slide">
+              <img src="./assets/img/hero-4.jpeg" alt="Slider Image" />
             </div>
           </div>
-          <div class="swiper-pagination"></div>
-
-          <div class="swiper-scrollbar"></div>
         </div>
+        <div class="swiper-pagination"></div>
 
-        <div class="hero-text">
-          <h1 class="heading-primary sm">
-            Mastering Locs, Elevating Confidence
-          </h1>
-          <p class="paragraph bg">
-            Precision grooming & loc care tailored just for you.
-          </p>
-          <a href="#services" class="btn btn--primary">Book an Appointment</a>
+        <div class="swiper-scrollbar"></div>
+      </div>
+
+      <div class="hero-text">
+        <h1 class="heading-primary sm">Mastering Locs, Elevating Confidence</h1>
+        <p class="paragraph bg">
+          Precision grooming & loc care tailored just for you.
+        </p>
+        <a href="#services" class="btn btn--primary">Book an Appointment</a>
+      </div>
+
+      <div class="header_info">
+        <div class="info-location">
+          <figure class="info-logo">
+            <img src="./assets/logo/location-icon.svg" alt="location" />
+          </figure>
+
+          <p class="paragraph sm">26 AVENUE, BROOKLIN, NJ-56870</p>
         </div>
-
-        <div class="header_info">
-          <div class="info-location">
-            <figure class="info-logo">
-              <img src="./assets/logo/location-icon.svg" alt="location" />
-            </figure>
-
-            <p class="paragraph sm">26 AVENUE, BROOKLIN, NJ-56870</p>
-          </div>
-          <div class="info-contact">
-            <figure class="info-logo">
-              <img src="./assets/logo/Call-Icon.svg" alt="call-info" />
-            </figure>
-            <p class="paragraph sm">+234 08123456788</p>
-          </div>
-          <div class="info-schedule">
-            <figure class="info-logo">
-              <img src="./assets/logo/time-icon.svg" alt="time-schedule" />
-            </figure>
-            <p class="paragraph sm">MONDAY - FRIDAY: 9.00AM - 17.00PM</p>
-          </div>
+        <div class="info-contact">
+          <figure class="info-logo">
+            <img src="./assets/logo/Call-Icon.svg" alt="call-info" />
+          </figure>
+          <p class="paragraph sm">+234 08123456788</p>
         </div>
-      </header>
-    </main>
+        <div class="info-schedule">
+          <figure class="info-logo">
+            <img src="./assets/logo/time-icon.svg" alt="time-schedule" />
+          </figure>
+          <p class="paragraph sm">MONDAY - FRIDAY: 9.00AM - 17.00PM</p>
+        </div>
+      </div>
+    </header>
+
     <section class="about center-children--bg">
       <div class="about_wrapper">
         <div class="about_content">
@@ -134,14 +131,20 @@
           <div class="textbox">
             <h2 class="heading-secondary bg">SPECIAL SERVICES</h2>
             <div class="textbox-icon">
-              <div class="icon"><ion-icon name="cut-outline"></ion-icon></div>
-              <div class="icon"><ion-icon name="sparkles-outline"></ion-icon></div>
-              <div class="icon"><ion-icon name="happy-outline"></ion-icon></div>
-            
+              <figure class="icon">
+                <img
+                  src="./assets/icons/scissors-left.svg"
+                  alt="scissor-icon" />
+              </figure>
+              <figure class="icon">
+                <img
+                  src="./assets/icons/scissors-right.svg"
+                  alt="scissor-icon" />
+              </figure>
             </div>
-
           </div>
         </div>
+
         <div class="service_image--wrapper swiper">
           <div class="service_image--wrap swiper-wrapper">
             <div class="service-img swiper-slide">
@@ -156,7 +159,6 @@
             <div class="service-img swiper-slide">
               <img src="./assets/img/service-4.jpeg" alt="Slider Image" />
             </div>
-          <div class="service_image--wrap swiper-wrapper">
             <div class="service-img swiper-slide">
               <img src="/assets/img/service-5.jpeg" alt="Slider Image" />
             </div>
@@ -166,18 +168,18 @@
             <div class="service-img swiper-slide">
               <img src="./assets/img/service-7.jpeg" alt="Slider Image" />
             </div>
-   
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-pagination service-pagination"></div>
         </div>
       </div>
     </section>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
-    <script
+    <!-- <script
       nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> -->
   </body>
 </html>

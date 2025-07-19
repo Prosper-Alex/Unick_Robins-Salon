@@ -23,6 +23,7 @@
   @include medium-phone {
     padding: 0.7rem 1.2rem;
   }
+
   @include tab-port {
     background-color: transparent;
     backdrop-filter: blur(0);
@@ -89,7 +90,7 @@
       width: min(100vw, 40rem);
       flex-direction: column;
       justify-content: center;
-      background-color: rgba(193, 154, 107, 0.6); // add transparency
+      background-color: rgba(193, 154, 107, 1); // add transparency
       backdrop-filter: blur(10px); // this is the blur
       -webkit-backdrop-filter: blur(10px); // for Safari
       transform: translateX(100%);
@@ -221,7 +222,7 @@
 
   .nav_toggle {
     display: none;
-    color: $accent-color;
+    color: $primary-color;
     font-size: 3rem;
     transition: all 0.2s;
 
@@ -235,7 +236,7 @@
       z-index: 150;
       margin-right: 2rem;
       padding: 1rem 2rem;
-      border: 1.5px solid #777;
+      border: 2px solid $text-color-light;
       border-radius: $border-radius-sm;
     }
 

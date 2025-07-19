@@ -110,6 +110,7 @@
     img {
       height: 100%;
       width: 100%;
+      object-fit: cover;
       border-radius: $border-radius-rm;
     }
   }
@@ -119,8 +120,6 @@
 
 .service {
   margin: 15rem 0;
-  &_wrapper {
-  }
 
   &_content {
     .textbox {
@@ -138,23 +137,10 @@
       .icon {
         width: 5rem;
         height: 5rem;
-        background-color: $accent-color;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        color: $white;
-        font-size: 2.4rem;
-        transition: all 0.3s ease;
 
-        &:hover {
-          background-color: darken($accent-color, 10%);
-          transform: scale(1.1);
-          box-shadow: $btn-shadow--hover;
-        }
-
-        ion-icon {
-          font-size: 2.4rem;
+        img {
+          height: 100%;
+          width: 100%;
         }
       }
     }
@@ -162,19 +148,68 @@
 
   &_image--wrapper {
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 3rem;
     width: 100%;
+    padding-bottom: 5rem;
+
+    .service_image--wrap {
+      width: 100%;
+      // padding: 2rem;
+    }
+
+    .service_image--wrapper.swiper {
+      overflow: visible;
+    }
+
+    .service_image--wrap.swiper-wrapper {
+      display: flex;
+    }
+
+    .service-img.swiper-slide {
+      width: 95%;
+      margin: 0 auto;
+      padding: 0 1rem;
+      flex-shrink: 0;
+    }
 
     .service-img {
       height: 50vh;
       width: 100%;
 
       img {
-        height: 100%;
+        display: block;
         width: 100%;
+        height: 100%;
+        object-fit: cover;
         border-radius: $border-radius-sm;
+      }
+    }
+
+    .service-pagination {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 0.8rem;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      .swiper-pagination-bullet {
+        width: 1.2rem;
+        height: 1.2rem;
+        background-color: $accent-color;
+        opacity: 0.5;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: darken($accent-color, 10%);
+        opacity: 1;
+        transform: scale(1.3);
       }
     }
   }

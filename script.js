@@ -21,7 +21,7 @@ window.addEventListener("load", () => {
 
 let swiperCard = new Swiper(".service_image--wrapper", {
   loop: true,
-  spaceBetween: 32,
+  spaceBetween: 30,
   grabCursor: true,
 
   autoplay: {
@@ -42,7 +42,7 @@ let swiperCard = new Swiper(".service_image--wrapper", {
 
   breakpoints: {
     600: {
-      slidesPerView: 2,
+      slidesPerView: 5,
     },
     968: {
       slidesPerView: 3,
@@ -50,6 +50,16 @@ let swiperCard = new Swiper(".service_image--wrapper", {
     1400: {
       slidesPerView: 4,
     },
+  },
+
+  slidesPerView: "auto",
+  centeredSlides: true,
+  centeredSlidesBounds: true,
+  spaceBetween: 5,
+  loop: false,
+  pagination: {
+    el: ".service-pagination",
+    clickable: true,
   },
 });
 

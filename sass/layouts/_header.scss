@@ -2,7 +2,7 @@
 @use "../abstracts/mixins" as *;
 
 .header {
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   padding: 0;
   position: relative;
@@ -162,6 +162,7 @@
       line-height: 1.3;
       font-weight: 700;
       margin-bottom: 2rem;
+      text-transform: uppercase;
     }
 
     .paragraph {
