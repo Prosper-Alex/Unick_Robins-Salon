@@ -23,6 +23,11 @@
   @include medium-phone {
     padding: 0.7rem 1.2rem;
   }
+  @include tab-port {
+    background-color: transparent;
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+  }
 
   .main-nav--wrapper {
     display: flex;
@@ -79,19 +84,14 @@
       position: fixed;
       top: 0;
       right: 0;
-      z-index: 110;
+      z-index: 1;
       height: 100vh;
       width: min(100vw, 40rem);
       flex-direction: column;
       justify-content: center;
-      background-color: rgba(
-        193,
-        154,
-        107,
-        0.5
-      ); // semi-transparent for visible blur
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
+      background-color: rgba(193, 154, 107, 0.6); // add transparency
+      backdrop-filter: blur(10px); // this is the blur
+      -webkit-backdrop-filter: blur(10px); // for Safari
       transform: translateX(100%);
       transition: transform 0.3s ease;
       gap: 3rem;
@@ -210,7 +210,6 @@
     font-weight: 500;
     transition: all 0.3s ease-in-out;
   }
-
   @include tab-port {
     #checkbox:checked ~ .nav_left .nav_lists {
       transform: translateX(0);
@@ -223,6 +222,7 @@
   .nav_toggle {
     display: none;
     color: $accent-color;
+    font-size: 3rem;
     transition: all 0.2s;
 
     @include tab-port {
@@ -230,7 +230,7 @@
       top: 3rem;
       right: 0;
       display: flex;
-      font-size: 2.4rem;
+      font-size: 4.4rem;
       cursor: pointer;
       z-index: 150;
       margin-right: 2rem;
@@ -243,12 +243,17 @@
       top: 1rem;
     }
 
-    span.open {
+    span {
       display: flex;
     }
-
-    span.close {
+    .none {
       display: none;
+    }
+
+    .no-scroll {
+      overflow: hidden;
+      height: 100vh;
+      touch-action: none;
     }
 
     .nav_actions {

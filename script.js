@@ -52,3 +52,25 @@ let swiperCard = new Swiper(".service_image--wrapper", {
     },
   },
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const navToggle = document.getElementById("nav-toggle");
+
+  navToggle.addEventListener("click", (e) => {
+    const icon = e.target.closest("ion-icon");
+    if (!icon) return;
+
+    const name = icon.getAttribute("name");
+
+    if (name === "menu" || name === "close") {
+      // Toggle both icons
+      const open = navToggle.querySelector(".open");
+      const close = navToggle.querySelector(".close");
+      open.classList.toggle("none");
+      close.classList.toggle("none");
+
+      // Toggle body scroll
+      document.body.classList.toggle("no-scroll");
+    }
+  });
+});
