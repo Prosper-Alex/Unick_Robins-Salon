@@ -187,6 +187,7 @@
       text-align: center;
       gap: 2rem;
       height: 60vh;
+      max-width: 100%;
       width: 100%;
       padding: 2rem;
       border-radius: $border-radius-sm;
@@ -196,8 +197,8 @@
       background-color: $white;
     }
 
-    .service-img.swiper-slide {
-      width: 95%;
+    .swiper-slide {
+      width: 100%;
       margin: 0 auto;
       padding: 0 1rem;
       flex-shrink: 0;
