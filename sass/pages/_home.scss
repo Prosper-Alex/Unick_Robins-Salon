@@ -143,6 +143,13 @@
           width: 100%;
         }
       }
+
+      .scissors-left {
+        transform: rotate(230deg);
+      }
+      .scissors-right {
+        transform: rotate(-230deg);
+      }
     }
   }
 
@@ -162,6 +169,7 @@
 
     .service_image--wrap.swiper-wrapper {
       display: flex;
+      $accent-color: rgb(193, 154, 107);
     }
 
     .service-img.swiper-slide {

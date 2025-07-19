@@ -42,7 +42,7 @@ let swiperCard = new Swiper(".service_image--wrapper", {
 
   breakpoints: {
     600: {
-      slidesPerView: 5,
+      slidesPerView: 2,
     },
     968: {
       slidesPerView: 3,
