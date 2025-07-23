@@ -20,17 +20,19 @@ window.addEventListener("load", () => {
 });
 
 let swiperCard = new Swiper(".service_image--wrapper", {
-  loop: true,
-  spaceBetween: 30,
+  loop: false,
   grabCursor: true,
+  centeredSlides: true,
+  centeredSlidesBounds: true,
+  spaceBetween: 5,
 
   autoplay: {
-    deley: 3000,
+    delay: 3000,
     disableOnInteraction: false,
   },
 
   pagination: {
-    el: ".swiper-pagination",
+    el: ".service-pagination",
     clickable: true,
     dynamicBullets: true,
   },
@@ -42,7 +44,7 @@ let swiperCard = new Swiper(".service_image--wrapper", {
 
   breakpoints: {
     600: {
-      slidesPerView: 2,
+      slidesPerView: 1,
     },
     968: {
       slidesPerView: 3,
@@ -50,16 +52,6 @@ let swiperCard = new Swiper(".service_image--wrapper", {
     1400: {
       slidesPerView: 4,
     },
-  },
-
-  slidesPerView: "auto",
-  centeredSlides: true,
-  centeredSlidesBounds: true,
-  spaceBetween: 5,
-  loop: false,
-  pagination: {
-    el: ".service-pagination",
-    clickable: true,
   },
 });
 
