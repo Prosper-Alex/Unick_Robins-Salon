@@ -101,38 +101,27 @@
   background-color: $white;
 }
 
-// Footer
-// This file contains styles for the footer section of the website.
+.textbox-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
 
-// .footer {
-//   margin: 15rem 0 5rem 0;
-//   &_wrapper {
-//     padding: 3rem 0;
-//   }
+  .icon {
+    width: 5rem;
+    height: 5rem;
 
-//   &_content {
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
 
-//     @include phone {
-//       flex-direction: column;
-//       align-items: center;
-//     }
-//     .footer-head {
-//       font-size: 2.4rem;
-//       font-weight: 700;
-//       text-transform: capitalize;
-//       letter-spacing: 0.5rem;
-//       cursor: pointer;
-
-//       @include tab-port {
-//         font-size: 3.2rem;
-//       }
-
-//       @include phone {
-//         margin-bottom: 2rem;
-//       }
-//     }
-//   }
-// }
+  .scissors-left {
+    transform: rotate(230deg);
+  }
+  .scissors-right {
+    transform: rotate(-230deg);
+  }
+}
