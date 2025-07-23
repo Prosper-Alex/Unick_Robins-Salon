@@ -165,8 +165,7 @@
 
     .service_image--wrap {
       display: flex;
-      gap: 1.5rem;
-      width: 100%;
+      max-width: 100%;
       // padding: 2rem;
     }
 
@@ -203,6 +202,7 @@
       padding: 0 1rem;
       flex-shrink: 0;
       box-sizing: border-box;
+      overflow: visible;
     }
 
     .service-img {
