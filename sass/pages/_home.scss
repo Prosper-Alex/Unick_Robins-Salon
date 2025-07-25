@@ -293,7 +293,6 @@
   position: relative;
   color: #fff;
   padding: 4rem;
-
   margin: 10rem 0;
 
   @include tab-land--sm {
@@ -327,7 +326,7 @@
     display: flex;
     max-width: 100%;
 
-    .service-testimonial {
+    .testimonial-pagination {
       position: absolute;
       bottom: 0;
       left: 50%;
@@ -335,7 +334,6 @@
       display: flex;
       gap: 0.8rem;
       z-index: 10;
-      display: flex;
       align-items: center;
       justify-content: center;
       width: 100%;
@@ -372,6 +370,9 @@
       gap: 5rem;
       text-align: center;
       margin: 4rem 0;
+      position: relative;
+      opacity: 2;
+      z-index: 10;
 
       .test_blog--img {
         height: 100px;
