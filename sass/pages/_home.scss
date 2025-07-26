@@ -322,7 +322,6 @@
   }
 
   &_blog {
-    background-color: transparent;
     display: flex;
     max-width: 100%;
 
@@ -339,7 +338,7 @@
       width: 100%;
       overflow: visible;
 
-      .swiper-pagination-bullet {
+      &:hover {
         width: 1.2rem;
         height: 1.2rem;
         background-color: $accent-color;
@@ -348,7 +347,7 @@
         transition: all 0.3s ease;
       }
 
-      .swiper-pagination-bullet-active {
+      :active {
         background-color: darken($accent-color, 10%);
         opacity: 1;
         transform: scale(1.3);

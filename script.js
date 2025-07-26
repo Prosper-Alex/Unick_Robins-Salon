@@ -15,11 +15,13 @@ new Swiper(".service_image--wrapper", {
   centeredSlidesBounds: true,
   spaceBetween: 20,
   autoplay: { delay: 3000, disableOnInteraction: false },
+
   pagination: {
     el: ".service-pagination",
     clickable: true,
     dynamicBullets: true,
   },
+
   navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
   breakpoints: {
     600: { slidesPerView: 1 },
@@ -29,7 +31,7 @@ new Swiper(".service_image--wrapper", {
 });
 
 // TESTIMONIAL SWIPER
-new Swiper(".testimonial_blog", {
+new testimonialSwiper(".testimonial_blog", {
   loop: true,
   grabCursor: true,
   centeredSlides: true,
@@ -39,15 +41,18 @@ new Swiper(".testimonial_blog", {
     delay: 3000,
     disableOnInteraction: false,
   },
+
   pagination: {
     el: ".testimonial-pagination",
     clickable: true,
     dynamicBullets: true,
   },
+
   navigation: {
     nextEl: ".swiper-button-next--testimonial",
     prevEl: ".swiper-button-prev--testimonial",
   },
+
   breakpoints: {
     600: { slidesPerView: 1 },
     968: { slidesPerView: 1 },
