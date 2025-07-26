@@ -13,9 +13,8 @@ new Swiper(".service_image--wrapper", {
   grabCursor: true,
   centeredSlides: true,
   centeredSlidesBounds: true,
-  spaceBetween: 20,
+  spaceBetween: 10,
   autoplay: { delay: 3000, disableOnInteraction: false },
-
   pagination: {
     el: ".service-pagination",
     clickable: true,
@@ -31,16 +30,17 @@ new Swiper(".service_image--wrapper", {
 });
 
 // TESTIMONIAL SWIPER
-new testimonialSwiper(".testimonial_blog", {
-  loop: true,
+new Swiper(".testimonial_blog", {
+  // loop: true,
   grabCursor: true,
+  spaceBetween: 20,
+  slidesPerView: 3,
   centeredSlides: true,
   centeredSlidesBounds: true,
-  spaceBetween: 20,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: false,
+  // },
 
   pagination: {
     el: ".testimonial-pagination",
@@ -48,16 +48,10 @@ new testimonialSwiper(".testimonial_blog", {
     dynamicBullets: true,
   },
 
-  navigation: {
-    nextEl: ".swiper-button-next--testimonial",
-    prevEl: ".swiper-button-prev--testimonial",
-  },
-
-  breakpoints: {
-    600: { slidesPerView: 1 },
-    968: { slidesPerView: 1 },
-    1400: { slidesPerView: 1 },
-  },
+  // navigation: {
+  //   nextEl: ".swiper-button-next--testimonial",
+  //   prevEl: ".swiper-button-prev--testimonial",
+  // },
 });
 
 // NAV TOGGLE
