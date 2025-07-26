@@ -31,27 +31,25 @@ new Swiper(".service_image--wrapper", {
 
 // TESTIMONIAL SWIPER
 new Swiper(".testimonial_blog", {
-  // loop: true,
+  loop: true,
   grabCursor: true,
   spaceBetween: 20,
-  slidesPerView: 3,
+  slidesPerView: 1,
   centeredSlides: true,
   centeredSlidesBounds: true,
-  // autoplay: {
-  //   delay: 3000,
-  //   disableOnInteraction: false,
-  // },
-
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: ".testimonial-pagination",
     clickable: true,
     dynamicBullets: true,
   },
-
-  // navigation: {
-  //   nextEl: ".swiper-button-next--testimonial",
-  //   prevEl: ".swiper-button-prev--testimonial",
-  // },
+  navigation: {
+    nextEl: ".testimonial_blog .swiper-button-next",
+    prevEl: ".testimonial_blog .swiper-button-prev",
+  },
 });
 
 // NAV TOGGLE
