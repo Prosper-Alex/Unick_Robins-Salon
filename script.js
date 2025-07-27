@@ -37,10 +37,10 @@ new Swiper(".testimonial_blog", {
   slidesPerView: 1,
   centeredSlides: true,
   centeredSlidesBounds: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: false,
+  // },
   pagination: {
     el: ".testimonial-pagination",
     clickable: true,

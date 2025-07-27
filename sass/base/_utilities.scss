@@ -111,6 +111,10 @@
   .icon {
     width: 5rem;
     height: 5rem;
+    @include phone {
+      height: 3.5rem;
+      width: 3.5rem;
+    }
 
     img {
       height: 100%;
