@@ -37,6 +37,7 @@ new Swiper(".testimonial_blog", {
   slidesPerView: 1,
   centeredSlides: true,
   centeredSlidesBounds: true,
+  watchOverflow: true,
   // autoplay: {
   //   delay: 3000,
   //   disableOnInteraction: false,
@@ -46,10 +47,21 @@ new Swiper(".testimonial_blog", {
     clickable: true,
     dynamicBullets: true,
   },
+
   navigation: {
     nextEl: ".testimonial_blog .swiper-button-next",
     prevEl: ".testimonial_blog .swiper-button-prev",
   },
+});
+
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector(".navigation");
+
+  if (window.scrollY > 10) {
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
 });
 
 // NAV TOGGLE
