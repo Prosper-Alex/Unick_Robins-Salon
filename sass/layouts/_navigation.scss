@@ -80,6 +80,7 @@
     font-size: 1.6rem;
     letter-spacing: 0.5px;
     color: $white;
+    text-transform: uppercase;
 
     @include tab-port {
       position: fixed;
