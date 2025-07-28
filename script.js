@@ -64,6 +64,29 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// TEXT COLOR TRANSITION ON WHITE BACKGROUND
+
+const nav = document.querySelector(".navigation");
+const lightSections = document.querySelectorAll(".light-section");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        nav.classList.add("nav--on-light");
+      } else {
+        nav.classList.remove("nav--on-light");
+      }
+    });
+  },
+  {
+    root: null,
+    threshold: 0.1, // Adjust how much of the section must be visible
+  }
+);
+
+lightSections.forEach((section) => observer.observe(section));
+
 // NAV TOGGLE
 document.addEventListener("DOMContentLoaded", () => {
   const navToggle = document.querySelector(".nav_toggle");
