@@ -525,6 +525,11 @@
   height: 80vh;
   // background-color: #f9f5f1;
 
+  @include phone {
+    display: flex;
+    justify-content: center;
+  }
+
   &::before {
     content: "";
     position: absolute;
