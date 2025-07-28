@@ -489,9 +489,8 @@
 
   &_image {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-    width: 100%;
+    // // grid-template-columns: repeat(3, 1fr);
+    // gap: 3rem;
 
     @include phone {
       display: grid;
@@ -513,12 +512,17 @@
 }
 
 .pricing-section {
-  background: url("/assets/img/testimonial-bg.jpg") center/cover no-repeat;
+  background: url(/assets/img/testimonial-bg.jpg) center / cover no-repeat;
   background-size: cover;
+  display: flex;
   background-position: center;
+  flex-direction: column;
   position: relative;
-  color: $white;
+  justify-content: space-around;
+  color: #fff;
   padding: 6rem 2rem;
+  margin: 10rem 0;
+  height: 80vh;
   // background-color: #f9f5f1;
 
   &::before {
@@ -539,13 +543,21 @@
   @include tab-land--sm {
     background-attachment: fixed;
   }
-  .heading-secondary {
-    font-size: 3rem;
+  .heading-secondary.md {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: $white;
+  }
+
+  .textbox-icon {
+    margin: -0.5rem 0 4rem 0;
+    display: none;
+
+    @include phone {
+      display: flex;
+    }
   }
 
   .pricing-tabs {
@@ -609,6 +621,7 @@
   }
 
   .pricing-footer {
+    justify-content: flex-end;
     margin-top: 5rem;
     display: flex;
     justify-content: space-between;
@@ -636,6 +649,9 @@
       font-size: 1.6rem;
       border: none;
       border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       cursor: pointer;
       transition: background-color 0.3s;
 
