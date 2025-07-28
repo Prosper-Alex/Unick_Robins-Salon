@@ -511,3 +511,148 @@
     }
   }
 }
+
+.pricing-section {
+  background: url("/assets/img/testimonial-bg.jpg") center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: $white;
+  padding: 6rem 2rem;
+  // background-color: #f9f5f1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  @include tab-land--sm {
+    background-attachment: fixed;
+  }
+  .heading-secondary {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: $white;
+  }
+
+  .pricing-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+
+    .tab-btn {
+      padding: 1rem 2rem;
+      border: none;
+      font-size: 1.6rem;
+      cursor: pointer;
+      background-color: #e2d4c0;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+
+      &.active {
+        background-color: #c19a6b;
+        color: white;
+      }
+    }
+  }
+
+  .pricing-content {
+    .pricing-dashboard {
+      display: none;
+
+      &.active {
+        display: block;
+        animation: fadeIn 0.5s ease-in;
+      }
+    }
+
+    .pricing-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+
+      .pricing-card {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 10px;
+        width: 250px;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+        h3 {
+          font-size: 1.8rem;
+          color: #333;
+        }
+
+        .price {
+          font-size: 2rem;
+          color: #c19a6b;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+
+  .pricing-footer {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+
+    .opening-hours {
+      font-size: 1.6rem;
+
+      h3 {
+        color: $white;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        color: $white;
+      }
+    }
+
+    .btn-appointment {
+      padding: 1.5rem 3rem;
+      background-color: #c19a6b;
+      color: white;
+      font-size: 1.6rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #b18458;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

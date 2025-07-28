@@ -64,28 +64,20 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// TEXT COLOR TRANSITION ON WHITE BACKGROUND
+const tabButtons = document.querySelectorAll(".tab-btn");
+const dashboards = document.querySelectorAll(".pricing-dashboard");
 
-const nav = document.querySelector(".navigation");
-const lightSections = document.querySelectorAll(".light-section");
+tabButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    // Remove active class from all buttons
+    tabButtons.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        nav.classList.add("nav--on-light");
-      } else {
-        nav.classList.remove("nav--on-light");
-      }
-    });
-  },
-  {
-    root: null,
-    threshold: 0.1, // Adjust how much of the section must be visible
-  }
-);
-
-lightSections.forEach((section) => observer.observe(section));
+    // Show relevant dashboard
+    dashboards.forEach((dash) => dash.classList.remove("active"));
+    document.getElementById(btn.dataset.tab).classList.add("active");
+  });
+});
 
 // NAV TOGGLE
 document.addEventListener("DOMContentLoaded", () => {
