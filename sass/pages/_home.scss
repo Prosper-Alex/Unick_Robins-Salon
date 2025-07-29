@@ -480,7 +480,7 @@
 
   &_content {
     .textbox {
-      .heading-secondary.md {
+      .heading-secondary.bg {
         text-transform: uppercase;
         letter-spacing: 0.1px;
       }
@@ -489,12 +489,12 @@
 
   &_image {
     display: grid;
-    // // grid-template-columns: repeat(3, 1fr);
-    // gap: 3rem;
 
+    border-top: $border-radius-sm;
     @include phone {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
+      width: 100%;
     }
 
     .team-img {
@@ -505,7 +505,20 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: $border-radius-sm;
+        border-top-left-radius: $border-radius-sm;
+        border-top-right-radius: $border-radius-sm;
+      }
+    }
+
+    .team-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 2rem;
+      background-color: $primary-color;
+      .heading-tertiary.md {
+        color: $white;
       }
     }
   }
@@ -522,8 +535,7 @@
   color: #fff;
   padding: 6rem 2rem;
   margin: 10rem 0;
-  height: 80vh;
-  // background-color: #f9f5f1;
+  height: 100%;
 
   @include phone {
     display: flex;
@@ -548,6 +560,7 @@
   @include tab-land--sm {
     background-attachment: fixed;
   }
+
   .heading-secondary.md {
     text-align: center;
     margin-bottom: 3rem;
@@ -562,6 +575,9 @@
 
     @include phone {
       display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
     }
   }
 
@@ -593,34 +609,49 @@
 
       &.active {
         display: block;
-        animation: fadeIn 0.5s ease-in;
       }
     }
 
-    .pricing-cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
+    .swiper {
+      width: 100%;
+
+      .swiper-wrapper {
+        padding-bottom: 3rem;
+      }
+
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+      }
 
       .pricing-card {
         background-color: #fff;
         padding: 2rem;
         border-radius: 10px;
-        width: 250px;
+        width: 300px;
         text-align: center;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
         h3 {
           font-size: 1.8rem;
           color: #333;
+          margin-bottom: 1rem;
         }
 
         .price {
-          font-size: 2rem;
-          color: #c19a6b;
-          margin-top: 1rem;
+          font-size: 1.6rem;
+          font-weight: 500;
+          color: #444;
         }
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        color: #fff;
+      }
+
+      .swiper-pagination-bullet {
+        background: #fff;
       }
     }
   }
@@ -664,16 +695,5 @@
         background-color: #b18458;
       }
     }
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(1rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
