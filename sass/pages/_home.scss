@@ -563,7 +563,7 @@
 
   .heading-secondary.md {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: $white;
@@ -647,7 +647,18 @@
 
       .swiper-button-prev,
       .swiper-button-next {
-        color: #fff;
+        color: $accent-color;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: $secondary-color;
+        color: $white;
+        cursor: pointer;
+        padding: 2rem;
+        font-size: 1.4rem;
       }
 
       .swiper-pagination-bullet {
