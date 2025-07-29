@@ -659,6 +659,10 @@
         cursor: pointer;
         padding: 2rem;
         font-size: 1.4rem;
+
+        @include phone {
+         display: none;
+       }
       }
 
       .swiper-pagination-bullet {
