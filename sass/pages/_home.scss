@@ -648,7 +648,26 @@
 
       .swiper-button-prev,
       .swiper-button-next {
+<<<<<<< HEAD
         display: none;
+=======
+        color: $accent-color;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: $secondary-color;
+        color: $white;
+        cursor: pointer;
+        padding: 2rem;
+        font-size: 1.4rem;
+
+        @include phone {
+         display: none;
+       }
+>>>>>>> d2770e6174f49ee65e302525ae73aa0e9bd5ed54
       }
 
       .swiper-pagination-bullet {
