@@ -648,26 +648,7 @@
 
       .swiper-button-prev,
       .swiper-button-next {
-<<<<<<< HEAD
         display: none;
-=======
-        color: $accent-color;
-        width: 3rem;
-        height: 3rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        background-color: $secondary-color;
-        color: $white;
-        cursor: pointer;
-        padding: 2rem;
-        font-size: 1.4rem;
-
-        @include phone {
-         display: none;
-       }
->>>>>>> d2770e6174f49ee65e302525ae73aa0e9bd5ed54
       }
 
       .swiper-pagination-bullet {
@@ -698,7 +679,6 @@
         color: $white;
       }
     }
-
     .btn-appointment {
       padding: 1.5rem 3rem;
       background-color: #c19a6b;
@@ -710,14 +690,145 @@
       align-items: center;
       gap: 0.5rem;
       cursor: pointer;
-      transition: background-color 0.3s;
+
+      animation: pulse 2.5s infinite;
 
       @include phone {
         padding: 1rem 1.25rem;
       }
+    }
+  }
+}
 
-      &:hover {
-        background-color: #b18458;
+// SECTION AVIALABLE
+.available {
+  background-color: #000;
+  color: #fff;
+  padding: 8rem 2rem;
+  text-align: center;
+
+  .heading-secondary {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .decor-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+
+    img,
+    i {
+      width: 3.5rem;
+      height: 3.5rem;
+
+      @include phone {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+
+    .scissors-left {
+      transform: rotate(230deg);
+    }
+
+    .scissors-right {
+      transform: rotate(-230deg);
+    }
+
+    i {
+      font-size: 2rem;
+      color: #fff;
+    }
+  }
+
+  .available_wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+
+    @include phone {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .available_textbox {
+    max-width: 400px;
+    text-align: left;
+
+    .opening-hours {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 1.5rem;
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.8rem 0;
+        border-bottom: 1px dotted #aaa;
+        color: #ccc;
+        font-family: "Arial", sans-serif;
+
+        span:first-child {
+          text-transform: capitalize;
+        }
+
+        span:last-child {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .booking_form {
+    background-color: #c89d63;
+    padding: 3rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 420px;
+    text-align: left;
+
+    .heading-tertiary {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      color: #fff;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      input,
+      select {
+        padding: 1.2rem 1rem;
+        font-size: 1.4rem;
+        margin-bottom: 1.2rem;
+        border: none;
+        border-radius: 4px;
+        outline: none;
+      }
+
+      .btn-appointment {
+        padding: 1.2rem;
+        font-size: 1.3rem;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #111;
+        }
       }
     }
   }

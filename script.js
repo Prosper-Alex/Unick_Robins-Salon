@@ -26,6 +26,8 @@ new Swiper(".service_image--wrapper", {
   navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
   breakpoints: {
     600: { slidesPerView: 1 },
+    980: { slidesPerView: 3 },
+    1025: { slidesPerView: 4 },
   },
 });
 
@@ -100,6 +102,16 @@ const pricingSwiper = new Swiper(".pricingSwiper", {
     },
   },
 });
+
+// For Book an appointment
+
+document
+  .querySelector(".booking_form form")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("Appointment booked successfully!");
+    this.reset();
+  });
 
 // NAV TOGGLE
 document.addEventListener("DOMContentLoaded", () => {
