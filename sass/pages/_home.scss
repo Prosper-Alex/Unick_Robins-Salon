@@ -604,6 +604,8 @@
   }
 
   .pricing-content {
+    width: 100%;
+
     .pricing-dashboard {
       display: none;
 
@@ -642,7 +644,7 @@
         .price {
           font-size: 1.6rem;
           font-weight: 500;
-          color: #444;
+          color: $subtle-grey;
         }
       }
 
@@ -652,7 +654,7 @@
       }
 
       .swiper-pagination-bullet {
-        background: #fff;
+        background: $white;
         margin-top: 0.75rem;
       }
     }
@@ -662,7 +664,8 @@
     justify-content: flex-end;
     margin-top: 5rem;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
     align-items: center;
@@ -679,9 +682,10 @@
         color: $white;
       }
     }
+
     .btn-appointment {
       padding: 1.5rem 3rem;
-      background-color: #c19a6b;
+      background-color: $accent-color;
       color: white;
       font-size: 1.6rem;
       border: none;
@@ -694,7 +698,7 @@
       animation: pulse 2.5s infinite;
 
       @include phone {
-        padding: 1rem 1.25rem;
+        padding: 1.25rem 2rem;
       }
     }
   }
@@ -702,8 +706,8 @@
 
 // SECTION AVIALABLE
 .available {
-  background-color: #000;
-  color: #fff;
+  background-color: $primary-color;
+  color: $white;
   padding: 8rem 2rem;
   text-align: center;
 
@@ -742,7 +746,7 @@
 
     i {
       font-size: 2rem;
-      color: #fff;
+      color: $white;
     }
   }
 
@@ -774,7 +778,6 @@
         padding: 0.8rem 0;
         border-bottom: 1px dotted #aaa;
         color: #ccc;
-        font-family: "Arial", sans-serif;
 
         span:first-child {
           text-transform: capitalize;
@@ -788,7 +791,7 @@
   }
 
   .booking_form {
-    background-color: #c89d63;
+    background-color: $accent-color--light;
     padding: 3rem;
     border-radius: 8px;
     width: 100%;
@@ -799,7 +802,7 @@
       font-size: 2rem;
       font-weight: bold;
       margin-bottom: 2rem;
-      color: #fff;
+      color: $white;
     }
 
     form {
@@ -819,7 +822,7 @@
       .btn-appointment {
         padding: 1.2rem;
         font-size: 1.3rem;
-        background-color: #000;
+        background-color: $primary-color;
         color: #fff;
         border: none;
         border-radius: 4px;
@@ -830,6 +833,50 @@
           background-color: #111;
         }
       }
+    }
+  }
+}
+
+// SECTION MEMBER
+
+.member {
+  margin: 10rem 0 15rem 0;
+  padding: 5rem;
+  background-color: $primary-color;
+  &_content {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+
+    @include tab-port {
+      flex-direction: column;
+      gap: 2.2rem;
+    }
+
+    .textbox {
+      display: flex;
+      align-items: center;
+      color: $white;
+      text-transform: uppercase;
+    }
+  }
+
+  &_content-btn {
+    padding: 1.5rem 3rem;
+    background-color: $accent-color;
+    color: white;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 8px;
+    gap: 0.5rem;
+    cursor: pointer;
+    animation: pulse 2.5s infinite;
+    text-transform: uppercase;
+
+    @include phone {
+      padding: 1.25rem 2rem;
     }
   }
 }

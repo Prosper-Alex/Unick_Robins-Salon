@@ -31,6 +31,7 @@ html {
 a {
   text-decoration: none;
   color: $white;
+  letter-spacing: -0.5px;
 
   @include tab-port {
     color: $white;
@@ -40,10 +41,12 @@ a {
 li {
   list-style: none;
   color: $white;
+  letter-spacing: -0.5px;
 }
 button {
   border: none;
   background-color: transparent;
+  letter-spacing: -0.5px;
 }
 
 p,
