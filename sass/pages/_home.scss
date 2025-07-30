@@ -629,6 +629,7 @@
         padding: 2rem;
         border-radius: 10px;
         width: 300px;
+        margin-bottom: 1.75rem;
         text-align: center;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
@@ -647,22 +648,12 @@
 
       .swiper-button-prev,
       .swiper-button-next {
-        color: $accent-color;
-        width: 3rem;
-        height: 3rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        background-color: $secondary-color;
-        color: $white;
-        cursor: pointer;
-        padding: 2rem;
-        font-size: 1.4rem;
+        display: none;
       }
 
       .swiper-pagination-bullet {
         background: #fff;
+        margin-top: 0.75rem;
       }
     }
   }
@@ -701,6 +692,10 @@
       gap: 0.5rem;
       cursor: pointer;
       transition: background-color 0.3s;
+
+      @include phone {
+        padding: 1rem 1.25rem;
+      }
 
       &:hover {
         background-color: #b18458;

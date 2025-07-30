@@ -16,7 +16,9 @@ new Swiper(".service_image--wrapper", {
   spaceBetween: 10,
   autoplay: { delay: 3000, disableOnInteraction: false },
   pagination: {
-    el: ".service-pagination",
+    nextEl: ".pricing-button-next",
+    prevEl: ".pricing-button-prev",
+
     clickable: true,
     dynamicBullets: true,
   },
@@ -24,8 +26,6 @@ new Swiper(".service_image--wrapper", {
   navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
   breakpoints: {
     600: { slidesPerView: 1 },
-    968: { slidesPerView: 3 },
-    1400: { slidesPerView: 4 },
   },
 });
 
