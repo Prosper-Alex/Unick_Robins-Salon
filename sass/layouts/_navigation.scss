@@ -31,7 +31,6 @@
     -webkit-backdrop-filter: blur(0);
   }
 
-  // === Logo Wrapper ===
   .main-nav--wrapper {
     display: flex;
     align-items: center;
@@ -52,7 +51,6 @@
     }
   }
 
-  // === Logo ===
   .nav_logo {
     height: 7rem;
     width: 7rem;
@@ -78,10 +76,8 @@
     }
   }
 
-  // === Scroll shrink effect ===
   &.scrolled {
     background-color: transparent;
-
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     padding: 0.5rem 2rem;
@@ -95,8 +91,6 @@
       font-size: 1.5rem;
     }
   }
-
-  // === Navigation Links ===
 
   .nav_lists {
     display: flex;
@@ -233,7 +227,6 @@
     }
   }
 
-  // === Mobile Nav Open ===
   @include tab-port {
     #checkbox:checked ~ .nav_left .nav_lists {
       transform: translateX(0);
@@ -243,69 +236,56 @@
     }
   }
 
-  // === Toggle Button ===
   .nav_toggle {
     display: none;
-    color: $primary-color;
-    font-size: 3rem;
-    transition: all 0.2s;
 
     @include tab-port {
+      display: flex;
       position: fixed;
-      top: 3rem;
-      right: 0;
-      display: flex;
-      font-size: 4.4rem;
-      cursor: pointer;
-      z-index: 150;
-      margin-right: 2rem;
-      padding: 1rem 2rem;
-      border: 2px solid $text-color-light;
-      border-radius: $border-radius-sm;
-    }
-
-    @include medium-phone {
-      top: 1rem;
-    }
-
-    span {
-      display: flex;
-    }
-
-    .none {
-      display: none;
-    }
-
-    .no-scroll {
-      overflow: hidden;
-      height: 100vh;
-      touch-action: none;
-    }
-
-    .nav_actions {
-      display: flex;
-      gap: 2.4rem;
+      top: 2rem;
+      right: 2rem;
+      width: 4.5rem;
+      height: 4.5rem;
+      justify-content: center;
       align-items: center;
-      font-size: 1.4rem;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 50%;
+      z-index: 150;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
-      .border {
-        background-color: $subtle-grey;
-        border: 1.5px solid #777;
-        border-radius: $border-radius-sm;
-        transition: all 0.3s ease-in-out;
-        overflow: hidden;
+      &:hover {
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+      }
 
-        &:hover {
-          scale: 1.02;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-          border-radius: $border-radius-rm;
-        }
+      &:active {
+        background: rgba(255, 255, 255, 0.25);
+      }
+
+      .menu-icon,
+      .close-icon {
+        font-size: 2.8rem;
+        color: $accent-color;
+        pointer-events: none;
+      }
+
+      .close-icon {
+        display: none;
       }
     }
   }
 
-  // === Hide Checkbox Input ===
   #checkbox {
     display: none;
   }
+}
+
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+  touch-action: none;
 }

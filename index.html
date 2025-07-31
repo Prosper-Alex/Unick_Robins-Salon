@@ -27,7 +27,7 @@
   </head>
   <body>
     <nav class="navigation center-children--sm" data-aos="fade-down">
-      <input type="checkbox" id="checkbox" />
+      <input type="checkbox" id="checkbox" hidden />
       <figure class="nav_logo">
         <img src="./assets/logo/logo.jpeg" alt="Logo" />
       </figure>
@@ -36,13 +36,13 @@
         <ul class="nav_lists">
           <li class="nav-item"><a href="#home">Home</a></li>
           <li class="nav-item"><a href="#about">About Us</a></li>
-          <li class="nav-item"><a href="#projects">Services</a></li>
+          <li class="nav-item"><a href="#service">Services</a></li>
           <li class="nav-item"><a href="#appointment">Appointment</a></li>
         </ul>
 
-        <label class="nav_toggle" id="nav-toggle" for="checkbox">
-          <span class="open"><ion-icon name="menu"></ion-icon></span>
-          <span class="close none"><ion-icon name="close"></ion-icon></span>
+        <label class="nav_toggle" for="checkbox">
+          <span class="menu-icon"><ion-icon name="menu"></ion-icon></span>
+          <span class="close-icon"><ion-icon name="close"></ion-icon></span>
         </label>
       </div>
     </nav>
@@ -129,7 +129,7 @@
         </div>
       </div>
     </section>
-    <section class="service light-section">
+    <section class="service light-section" id="service">
       <div class="service_wrapper">
         <div class="service_content">
           <div class="textbox">
@@ -607,7 +607,7 @@
       </div>
     </section>
 
-    <section class="available" id="available">
+    <section class="available" id="appointment">
       <div class="container available_wrapper">
         <div class="available_textbox">
           <h2 class="heading-secondary">WE ARE AVAILABLE</h2>
@@ -666,28 +666,68 @@
         </div>
       </div>
     </section>
+    <section class="contact" id="contact">
+      <div class="contact_wrapper">
+        <div class="contact_content">
+          <div class="textbox">
+            <h2 class="heading-secondary bg">Contact Us</h2>
+            <div class="textbox-icon">
+              <figure class="icon scissors-left">
+                <img
+                  src="./assets/icons/scissors-left.svg"
+                  alt="scissor-icon" />
+              </figure>
 
-    <section class="contact">
-      <div class="contact_wrapper"></div>
-      <div class="contact_content">
-        <div class="textbox">
-          <h2 class="heading-secondary md">Contact Us</h2>
-          <div class="textbox-icon">
-            <figure class="icon scissors-left">
-              <img src="./assets/icons/scissors-left.svg" alt="scissor-icon" />
+              <i
+                class="fa-duotone fa-solid fa-x fa-flip-both"
+                style="
+                  --fa-primary-color: #e6b479;
+                  --fa-secondary-color: #e8aa64;
+                  --fa-secondary-opacity: 0.7;
+                "></i>
+
+              <figure class="icon scissors-right">
+                <img
+                  src="./assets/icons/scissors-right.svg"
+                  alt="scissor-icon" />
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact_infos">
+          <div class="contact_info">
+            <figure class="info-logo">
+              <img src="./assets/logo/location-icon.svg" alt="location" />
             </figure>
+            <h3 class="heading-tertiary accent-color rm">Location</h3>
+            <p class="paragraph sm">26 Avenue, Brooklin, NJ-56870</p>
+          </div>
 
-            <i
-              class="fa-duotone fa-solid fa-x fa-flip-both"
-              style="
-                --fa-primary-color: #e6b479;
-                --fa-secondary-color: #e8aa64;
-                --fa-secondary-opacity: 0.7;
-              "></i>
-
-            <figure class="icon scissors-right">
-              <img src="./assets/icons/scissors-right.svg" alt="scissor-icon" />
+          <div class="contact_info">
+            <figure class="info-logo">
+              <img src="./assets/logo/Call-Icon.svg" alt="call-info" />
             </figure>
+            <h3 class="heading-tertiary accent-color rm">Call us</h3>
+            <p class="paragraph sm">+234 08123456788</p>
+          </div>
+
+          <div class="contact_info">
+            <a href="mailto:contact@gmail.com">
+              <figure class="info-logo">
+                <img src="/assets/icons/email-icon.svg" alt="email-icon" />
+              </figure>
+            </a>
+            <h3 class="heading-tertiary accent-color rm">Email us</h3>
+            <p class="paragraph sm">contact@gmail.com</p>
+          </div>
+
+          <div class="contact_info">
+            <figure class="info-logo">
+              <img src="./assets/logo/time-icon.svg" alt="time-schedule" />
+            </figure>
+            <h3 class="heading-tertiary accent-color rm">Hours</h3>
+            <p class="paragraph sm">Monday - Friday: 9.00AM - 5.00PM</p>
           </div>
         </div>
       </div>

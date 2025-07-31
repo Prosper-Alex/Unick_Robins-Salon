@@ -843,6 +843,10 @@
   margin: 10rem 0 15rem 0;
   padding: 5rem;
   background-color: $primary-color;
+
+  @include medium-phone {
+    padding: 3rem;
+  }
   &_content {
     display: flex;
     gap: 3rem;
@@ -879,6 +883,95 @@
 
     @include phone {
       padding: 1.25rem 2rem;
+    }
+  }
+}
+
+// SECTION CONTACT
+.contact {
+  background: url(/assets/img/contact-img.jpg) center / cover no-repeat;
+  background-size: cover;
+  display: flex;
+  background-position: center;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-around;
+  color: #fff;
+  padding: 6rem 2rem;
+  margin: 10rem 0;
+  height: 100%;
+
+  @include phone {
+    display: flex;
+    justify-content: center;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .contact_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    animation: fadeInUp 1.5s ease-out both;
+    z-index: 2;
+  }
+
+  .textbox {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .contact_infos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+
+    .contact_info {
+      text-align: center;
+      max-width: 200px;
+      animation: fadeInScale 2s ease both;
+      text-transform: uppercase;
+
+      .info-logo {
+        height: 3rem;
+        width: 3rem;
+        padding: 1.5rem;
+        margin: 1.4rem auto;
+        border-radius: 50%;
+
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+
+      a {
+        display: inline-block;
+
+        &:hover {
+          transform: scale(1.1);
+          transition: transform 0.3s ease;
+        }
+      }
     }
   }
 }
