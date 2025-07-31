@@ -752,7 +752,7 @@
 
   .available_wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     gap: 5rem;
     flex-wrap: wrap;
 
@@ -865,6 +865,8 @@
 
   &_content-btn {
     padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center;
     background-color: $accent-color;
     color: white;
     font-size: 1.6rem;
