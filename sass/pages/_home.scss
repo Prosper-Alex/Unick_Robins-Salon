@@ -996,7 +996,7 @@
 
     @include big-phone {
       grid-template-columns: repeat(1, 1fr);
-      gap: 2rem;
+      gap: 3rem;
     }
 
     .map {
@@ -1017,6 +1017,7 @@
       flex-direction: column;
       justify-content: space-around;
       width: 100%;
+      gap: 2rem;
 
       .contact-info {
         display: flex;
