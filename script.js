@@ -104,14 +104,43 @@ const pricingSwiper = new Swiper(".pricingSwiper", {
 });
 
 // For Book an appointment
+const bookAppointmentForm = document.getElementById('bookAppointment')
+const nameValue = document.getElementById('name')
+const serviceValue = document.querySelector('#bookAppointment select')
+const dateValue = document.getElementById('date')
+const timeValue = document.getElementById('time')
+const phoneNumber = '2348119638793'
 
-document
-  .querySelector(".booking_form form")
-  .addEventListener("submit", function (e) {
-    e.preventDefault();
-    alert("Appointment booked successfully!");
-    this.reset();
-  });
+bookAppointmentForm.addEventListener('submit', function (e) {
+  e.preventDefault()
+  
+  const name = nameValue.value.trim()
+  const service = serviceValue.value.trim()
+  const date = dateValue.value.trim()
+  const time = timeValue.value.trim()
+
+  if (!name || !service || !date || !time) {
+    alert('Please fill in all fields.')
+    return
+  }
+
+  const selectedDate = new Date(date);
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  if (selectedDate < today) {
+    alert('Please select a valid date that is not in the past.');
+    return;
+  }
+
+  const dateString = new Date(date).toDateString()
+
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=Hello,%20I%20would%20like%20to%20book%20an%20appointment.%0A%0AName:%20${encodeURIComponent(name)}%0AService:%20${encodeURIComponent(service)}%0ADate:%20${encodeURIComponent(dateString)}%0ATime:%20${encodeURIComponent(time)}%0A%0AThank%20you!`
+
+  window.open(whatsappUrl, '_blank')
+  bookAppointmentForm.reset()
+  alert('Your appointment request has been sent!')
+})
 
 // NAV TOGGLE
 document.addEventListener("DOMContentLoaded", () => {
@@ -125,3 +154,24 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.toggle("no-scroll");
   });
 });
+
+const appointmentDetails = {
+  name: "Prosper Alex",
+  service: "Jungle Locks",
+  date: "13 August, 2024",
+  time: "13:00 PM",
+};
+
+const whatsappMessage = `
+Hello, I'd like to book an appointment.
+
+Name: ${appointmentDetails.name}
+Service: ${appointmentDetails.service}
+Date: ${appointmentDetails.date}
+Time: ${appointmentDetails.time}
+
+Thank you!
+
+`;
+
+console.log(whatsappMessage);
