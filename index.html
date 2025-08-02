@@ -8,31 +8,26 @@
     <link
       rel="shortcut icon"
       href="./assets/logo/logo.jpeg"
-      type="image/x-icon"
-    />
+      type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
 
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.css"
-    />
+      href="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.css" />
 
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
     <link rel="stylesheet" href="./css/main.css" />
 
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   </head>
   <body>
     <nav class="navigation center-children--sm" data-aos="fade-down">
@@ -110,34 +105,6 @@
       </div>
     </header>
 
-    <section class="about center-children--bg" id="about">
-      <div class="about_wrapper">
-        <div class="about_content">
-          <div class="textbox">
-            <p class="paragraph md accent-color">THE UNIQUE STROY</p>
-            <h2 class="heading-secondary bg">10 YEARS OF EXPERIENCE</h2>
-            <h2 class="paragraph bg">
-              For the past decade, we’ve helped clients start, grow, and
-              maintain healthy, beautiful locs. Every session is guided by care,
-              skill, and a passion for natural hair culture.
-            </h2>
-            <a
-              href="https://www.instagram.com/unick_robins?igsh=NnY1eGdmdGNscmtj"
-              class="btn btn--primary"
-              >View More</a
-            >
-          </div>
-        </div>
-        <div class="about_image">
-          <figure class="about_img">
-            <img src="./assets/img/about-1.jpeg" alt="about-img" />
-          </figure>
-          <figure class="about_img">
-            <img src="./assets/img/about-2.jpeg" alt="about-img" />
-          </figure>
-        </div>
-      </div>
-    </section>
     <section class="service light-section" id="service">
       <div class="service_wrapper">
         <div class="service_content">
@@ -147,8 +114,7 @@
               <figure class="icon scissors-left">
                 <img
                   src="./assets/icons/scissors-left.svg"
-                  alt="scissor-icon"
-                />
+                  alt="scissor-icon" />
               </figure>
 
               <i
@@ -157,14 +123,12 @@
                   --fa-primary-color: #e6b479;
                   --fa-secondary-color: #e8aa64;
                   --fa-secondary-opacity: 0.7;
-                "
-              ></i>
+                "></i>
 
               <figure class="icon scissors-right">
                 <img
                   src="./assets/icons/scissors-right.svg"
-                  alt="scissor-icon"
-                />
+                  alt="scissor-icon" />
               </figure>
             </div>
           </div>
@@ -353,6 +317,258 @@
         </div>
       </div>
     </section>
+
+    <section class="available" id="appointment">
+      <div class="container available_wrapper">
+        <div class="available_textbox">
+          <h2 class="heading-secondary">WE ARE AVAILABLE</h2>
+          <div class="textbox-icon">
+            <figure class="icon scissors-left">
+              <img src="./assets/icons/scissors-left.svg" alt="scissor-icon" />
+            </figure>
+
+            <i
+              class="fa-duotone fa-solid fa-x fa-flip-both"
+              style="
+                --fa-primary-color: #e6b479;
+                --fa-secondary-color: #e8aa64;
+                --fa-secondary-opacity: 0.7;
+              "></i>
+
+            <figure class="icon scissors-right">
+              <img src="./assets/icons/scissors-right.svg" alt="scissor-icon" />
+            </figure>
+          </div>
+
+          <ul class="opening-hours">
+            <li><span>Monday</span><span>9am - 6pm</span></li>
+            <li><span>Tuesday</span><span>9am - 6pm</span></li>
+            <li><span>Wednesday</span><span>9am - 6pm</span></li>
+            <li><span>Thursday</span><span>9am - 6pm</span></li>
+            <li><span>Friday</span><span>9am - 6pm</span></li>
+            <li><span>Saturday</span><span>8am - 7pm</span></li>
+            <li><span>Sunday</span><span>CLOSED</span></li>
+          </ul>
+        </div>
+
+        <div class="booking_form">
+          <h3 class="heading-tertiary">BOOK NOW</h3>
+          <form id="bookAppointment">
+            <input
+              type="text"
+              placeholder="Name"
+              name="name"
+              id="name"
+              required />
+            <select required name="service">
+              <option value="">Choose Service</option>
+              <option value="Locs Maintenance">Locs Maintenance</option>
+              <option value="Fresh Locs">Fresh Locs</option>
+              <option value="Locs Installation">Locs Installation</option>
+              <option value="Barbing">Barbing</option>
+            </select>
+            <input type="date" required id="date" />
+            <input type="time" required id="time" />
+            <button class="btn-appointment" type="submit">
+              MAKE AN APPOINTMENT NOW →
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing-section">
+      <div class="pricing-header">
+        <h2 class="heading-secondary md">Our Services</h2>
+        <div class="textbox-icon">
+          <figure class="icon scissors-left">
+            <img src="./assets/icons/scissors-left.svg" alt="scissor-icon" />
+          </figure>
+          <i
+            class="fa-duotone fa-scissors fa-flip-both"
+            style="
+              --fa-primary-color: #e6b479;
+              --fa-secondary-color: #e8aa64;
+              --fa-secondary-opacity: 0.7;
+            "></i>
+          <figure class="icon scissors-right">
+            <img src="./assets/icons/scissors-right.svg" alt="scissor-icon" />
+          </figure>
+        </div>
+
+        <div class="pricing-tabs">
+          <button class="tab-btn active" data-tab="locs">Locs</button>
+          <button class="tab-btn" data-tab="barbing">Barbing</button>
+          <button class="tab-btn" data-tab="homeservice">Home Service</button>
+        </div>
+      </div>
+
+      <div class="pricing-content">
+        <!-- Locs Section -->
+        <div class="pricing-dashboard active" id="locs">
+          <div class="swiper pricingSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="pricing-card">
+                  <h3>Locs Maintenance</h3>
+                  <p class="price">₦10,000 – ₦20,000</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="pricing-card">
+                  <h3>Locs Repair</h3>
+                  <p class="price">₦15,000 – ₦25,000</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="pricing-card">
+                  <h3>Fresh Locs</h3>
+                  <p class="price">₦30,000 – ₦50,000</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="pricing-card">
+                  <h3>Locs Installation</h3>
+                  <p class="price">₦30,000 – ₦50,000</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <!-- Barbing Section -->
+        <div class="pricing-dashboard" id="barbing">
+          <div class="swiper pricingSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="pricing-card">
+                  <h3>Barb & Black Dye</h3>
+                  <p class="price">₦5,000 – ₦10,000</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="pricing-card">
+                  <h3>Fade & Styling</h3>
+                  <p class="price">₦2,000 – ₦4,000</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="pricing-card">
+                  <h3>Barb & Colour Dye</h3>
+                  <p class="price">₦10,000 – ₦20,000</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="pricing-card">
+                  <h3>Beard Grooming</h3>
+                  <p class="price">₦1,000 – ₦2,000</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <!-- Home Service Section -->
+        <div class="pricing-dashboard" id="homeservice">
+          <div class="swiper pricingSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="pricing-card">
+                  <h3>Locs Maintenance</h3>
+                  <p class="price">₦30,000+</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="pricing-card">
+                  <h3>Fresh Locs</h3>
+                  <p class="price">₦50,000+</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-footer">
+        <a href="#appointment" class="btn-appointment"
+          >Book Appointment &rarr;</a
+        >
+      </div>
+    </section>
+
+    <section class="about center-children--bg" id="about">
+      <div class="about_wrapper">
+        <div class="about_content">
+          <div class="textbox">
+            <p class="paragraph md accent-color">THE UNIQUE STROY</p>
+            <h2 class="heading-secondary bg">10 YEARS OF EXPERIENCE</h2>
+            <h2 class="paragraph bg">
+              For the past decade, we’ve helped clients start, grow, and
+              maintain healthy, beautiful locs. Every session is guided by care,
+              skill, and a passion for natural hair culture.
+            </h2>
+            <a
+              href="https://www.instagram.com/unick_robins?igsh=NnY1eGdmdGNscmtj"
+              class="btn btn--primary"
+              >View More</a
+            >
+          </div>
+        </div>
+        <div class="about_image">
+          <figure class="about_img">
+            <img src="./assets/img/about-1.jpeg" alt="about-img" />
+          </figure>
+          <figure class="about_img">
+            <img src="./assets/img/about-2.jpeg" alt="about-img" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="team">
+      <div class="team_wrapper center-children--bg">
+        <div class="team_content">
+          <div class="textbox">
+            <h2 class="heading-secondary bg">Meet the Founder</h2>
+          </div>
+
+          <div class="textbox-icon">
+            <figure class="icon scissors-left">
+              <img src="./assets/icons/scissors-left.svg" alt="scissor-icon" />
+            </figure>
+
+            <i
+              class="fa-duotone fa-solid fa-x fa-flip-both"
+              style="
+                --fa-primary-color: #e6b479;
+                --fa-secondary-color: #e8aa64;
+                --fa-secondary-opacity: 0.7;
+              "></i>
+
+            <figure class="icon scissors-right">
+              <img src="./assets/icons/scissors-right.svg" alt="scissor-icon" />
+            </figure>
+          </div>
+        </div>
+
+        <div class="team_image">
+          <figure class="team-img">
+            <img
+              src="./assets/img/unick-robin--img.jpeg"
+              alt="Logo"
+              Unick-robin--img />
+          </figure>
+          <div class="team-info">
+            <h3 class="heading-tertiary md">Unick Robins</h3>
+            <p class="paragraph md accent-color">Loctician Barber</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="testimonial">
       <div class="testimonial_wrapper">
         <div class="testimonial_content">
@@ -363,8 +579,7 @@
               <figure class="icon scissors-left">
                 <img
                   src="./assets/icons/scissors-left.svg"
-                  alt="scissor-icon"
-                />
+                  alt="scissor-icon" />
               </figure>
 
               <i
@@ -373,14 +588,12 @@
                   --fa-primary-color: #e6b479;
                   --fa-secondary-color: #e8aa64;
                   --fa-secondary-opacity: 0.7;
-                "
-              ></i>
+                "></i>
 
               <figure class="icon scissors-right">
                 <img
                   src="./assets/icons/scissors-right.svg"
-                  alt="scissor-icon"
-                />
+                  alt="scissor-icon" />
               </figure>
             </div>
           </div>
@@ -472,248 +685,6 @@
         </div>
       </div>
     </section>
-    <section class="team">
-      <div class="team_wrapper center-children--bg">
-        <div class="team_content">
-          <div class="textbox">
-            <h2 class="heading-secondary bg">Meet the Founder</h2>
-          </div>
-
-          <div class="textbox-icon">
-            <figure class="icon scissors-left">
-              <img src="./assets/icons/scissors-left.svg" alt="scissor-icon" />
-            </figure>
-
-            <i
-              class="fa-duotone fa-solid fa-x fa-flip-both"
-              style="
-                --fa-primary-color: #e6b479;
-                --fa-secondary-color: #e8aa64;
-                --fa-secondary-opacity: 0.7;
-              "
-            ></i>
-
-            <figure class="icon scissors-right">
-              <img src="./assets/icons/scissors-right.svg" alt="scissor-icon" />
-            </figure>
-          </div>
-        </div>
-
-        <div class="team_image">
-          <figure class="team-img">
-            <img
-              src="./assets/img/unick-robin--img.jpeg"
-              alt="Logo"
-              Unick-robin--img
-            />
-          </figure>
-          <div class="team-info">
-            <h3 class="heading-tertiary md">Unick Robins</h3>
-            <p class="paragraph md accent-color">Loctician Barber</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="pricing-section">
-      <div class="pricing-header">
-        <h2 class="heading-secondary md">Pricing</h2>
-        <div class="textbox-icon">
-          <figure class="icon scissors-left">
-            <img src="./assets/icons/scissors-left.svg" alt="scissor-icon" />
-          </figure>
-
-          <i
-            class="fa-duotone fa-solid fa-x fa-flip-both"
-            style="
-              --fa-primary-color: #e6b479;
-              --fa-secondary-color: #e8aa64;
-              --fa-secondary-opacity: 0.7;
-            "
-          ></i>
-
-          <figure class="icon scissors-right">
-            <img src="./assets/icons/scissors-right.svg" alt="scissor-icon" />
-          </figure>
-        </div>
-        <div class="pricing-tabs">
-          <button class="tab-btn active" data-tab="locs">Locs</button>
-          <button class="tab-btn" data-tab="barbing">Barbing</button>
-          <button class="tab-btn" data-tab="homeservice">Home Service</button>
-        </div>
-      </div>
-
-      <div class="pricing-content">
-        <div class="pricing-dashboard active" id="locs">
-          <div class="swiper pricingSwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="pricing-card">
-                  <h3>Locs Maintenance</h3>
-                  <p class="price">₦10,000 – ₦20,000</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="pricing-card">
-                  <h3>Locs Repair</h3>
-                  <p class="price">₦15,000 – ₦25,000</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="pricing-card">
-                  <h3>Fresh Locs</h3>
-                  <p class="price">₦30,000 – ₦50,000</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="pricing-card">
-                  <h3>Locs Installation</h3>
-                  <p class="price">₦30,000 – ₦50,000</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev pricing-button-prev">
-              <i class="fa fa-chevron-left"></i>
-            </div>
-            <div class="swiper-button-next pricing-button-next">
-              <i class="fa fa-chevron-right"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="pricing-dashboard" id="barbing">
-          <div class="swiper pricingSwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="pricing-card">
-                  <h3>Barb & black dye</h3>
-                  <p class="price">₦5,000 – ₦10,000</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="pricing-card">
-                  <h3>Fade & Styling</h3>
-                  <p class="price">₦2,000 – ₦4,000</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="pricing-card">
-                  <h3>Barb & color dye</h3>
-                  <p class="price">₦10,000 – ₦20,000</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="pricing-card">
-                  <h3>Beard Grooming</h3>
-                  <p class="price">₦1,000 – ₦2,000</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev pricing-button-prev">
-              <i class="fa fa-chevron-left"></i>
-            </div>
-            <div class="swiper-button-next pricing-button-next">
-              <i class="fa fa-chevron-right"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="pricing-dashboard" id="homeservice">
-          <div class="swiper pricingSwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="pricing-card">
-                  <h3>Locs Maintenance</h3>
-                  <p class="price">₦30,000 – Above</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="pricing-card">
-                  <h3>Fresh locs 50,000</h3>
-                  <p class="price">₦50,000 – Above</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev pricing-button-prev">
-              <i class="fa fa-chevron-left"></i>
-            </div>
-            <div class="swiper-button-next pricing-button-next">
-              <i class="fa fa-chevron-right"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="pricing-footer">
-        <a href="#appointment" class="btn-appointment"
-          >Book Appointment &rarr;</a
-        >
-      </div>
-    </section>
-
-    <section class="available" id="appointment">
-      <div class="container available_wrapper">
-        <div class="available_textbox">
-          <h2 class="heading-secondary">WE ARE AVAILABLE</h2>
-          <div class="textbox-icon">
-            <figure class="icon scissors-left">
-              <img src="./assets/icons/scissors-left.svg" alt="scissor-icon" />
-            </figure>
-
-            <i
-              class="fa-duotone fa-solid fa-x fa-flip-both"
-              style="
-                --fa-primary-color: #e6b479;
-                --fa-secondary-color: #e8aa64;
-                --fa-secondary-opacity: 0.7;
-              "
-            ></i>
-
-            <figure class="icon scissors-right">
-              <img src="./assets/icons/scissors-right.svg" alt="scissor-icon" />
-            </figure>
-          </div>
-
-          <ul class="opening-hours">
-            <li><span>Monday</span><span>9am - 6pm</span></li>
-            <li><span>Tuesday</span><span>9am - 6pm</span></li>
-            <li><span>Wednesday</span><span>9am - 6pm</span></li>
-            <li><span>Thursday</span><span>9am - 6pm</span></li>
-            <li><span>Friday</span><span>9am - 6pm</span></li>
-            <li><span>Saturday</span><span>8am - 7pm</span></li>
-            <li><span>Sunday</span><span>CLOSED</span></li>
-          </ul>
-        </div>
-
-        <div class="booking_form">
-          <h3 class="heading-tertiary">BOOK NOW</h3>
-          <form id="bookAppointment">
-            <input
-              type="text"
-              placeholder="Name"
-              name="name"
-              id="name"
-              required
-            />
-            <select required name="service">
-              <option value="">Choose Service</option>
-              <option value="Locs Maintenance">Locs Maintenance</option>
-              <option value="Fresh Locs">Fresh Locs</option>
-              <option value="Locs Installation">Locs Installation</option>
-              <option value="Barbing">Barbing</option>
-            </select>
-            <input type="date" required id="date" />
-            <input type="time" required id="time" />
-            <button class="btn-appointment" type="submit">
-              MAKE AN APPOINTMENT NOW →
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
 
     <section class="member">
       <div class="member_content center_children--bg">
@@ -734,8 +705,7 @@
               <figure class="icon scissors-left">
                 <img
                   src="./assets/icons/scissors-left.svg"
-                  alt="scissor-icon"
-                />
+                  alt="scissor-icon" />
               </figure>
 
               <i
@@ -744,14 +714,12 @@
                   --fa-primary-color: #e6b479;
                   --fa-secondary-color: #e8aa64;
                   --fa-secondary-opacity: 0.7;
-                "
-              ></i>
+                "></i>
 
               <figure class="icon scissors-right">
                 <img
                   src="./assets/icons/scissors-right.svg"
-                  alt="scissor-icon"
-                />
+                  alt="scissor-icon" />
               </figure>
             </div>
           </div>
@@ -802,8 +770,7 @@
             src="https://maps.google.com/maps?q=6.504700,3.171100&z=15&output=embed"
             allowfullscreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="map-info">
           <div class="contact-info">
@@ -843,8 +810,7 @@
                 --fa-primary-color: #e6b479;
                 --fa-secondary-color: #e8aa64;
                 --fa-secondary-opacity: 0.7;
-              "
-            ></i>
+              "></i>
 
             <figure class="icon scissors-right">
               <img src="./assets/icons/scissors-right.svg" alt="scissor-icon" />
@@ -870,29 +836,31 @@
         <div class="subscribe">
           <h3 class="heading-tertiary md">SUBSCRIBE US</h3>
           <p class="paragraph sm">
-            Subscribe to our Newsletter to get first Gift voucher by Unique
-            Robins
+            Subscribe for the latest hair care tips, trends, and updates from
+            Unique Robins.
           </p>
           <form class="subscribe_form">
             <input type="email" placeholder="Enter your email" />
-            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            <a href="mailto:unickrobins@gmail.com"
+              ><button type="submit"><i class="fas fa-paper-plane"></i></button
+            ></a>
           </form>
           <div class="social_icons">
             <a
               href="https://www.facebook.com/share/1VEaPgjB2F/"
               target="_blank"
-              aria-label="Facebook"
-            >
+              rel="noopener noreferrer"
+              aria-label="Facebook">
               <i class="fab fa-facebook-f"></i>
             </a>
+
             <a href="https://twitter.com" target="_blank" aria-label="Twitter">
               <i class="fab fa-in"></i>
             </a>
             <a
               href="https://plus.google.com"
               target="_blank"
-              aria-label="Google Plus"
-            >
+              aria-label="Google Plus">
               <i class="fab fa-google-plus-g"></i>
             </a>
             <a href="https://youtube.com" target="_blank" aria-label="YouTube">

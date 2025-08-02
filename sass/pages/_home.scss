@@ -608,9 +608,13 @@
 
     .pricing-dashboard {
       display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease;
 
       &.active {
         display: block;
+        animation: fadeIn 0.5s ease;
+        opacity: 1;
       }
     }
 
@@ -716,55 +720,33 @@
     margin-bottom: 1.5rem;
     text-transform: uppercase;
     font-weight: bold;
-  }
-
-  .decor-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 4rem;
-
-    img,
-    i {
-      width: 3.5rem;
-      height: 3.5rem;
-
-      @include phone {
-        width: 2.5rem;
-        height: 2.5rem;
-      }
-    }
-
-    .scissors-left {
-      transform: rotate(230deg);
-    }
-
-    .scissors-right {
-      transform: rotate(-230deg);
-    }
-
-    i {
-      font-size: 2rem;
-      color: $white;
-    }
+    text-align: center;
   }
 
   .available_wrapper {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 5rem;
-    flex-wrap: wrap;
+    width: 100%;
 
     @include phone {
       flex-direction: column;
       align-items: center;
+    }
+
+    @include big-phone {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 
   .available_textbox {
     max-width: 400px;
     text-align: left;
+
+    @include big-phone {
+      display: contents;
+      width: 100%;
+    }
 
     .opening-hours {
       list-style: none;
@@ -795,8 +777,12 @@
     padding: 3rem;
     border-radius: 8px;
     width: 100%;
-    max-width: 420px;
+    max-width: 600px;
     text-align: left;
+
+    @include phone {
+      max-width: 600px;
+    }
 
     .heading-tertiary {
       font-size: 2rem;
@@ -940,8 +926,9 @@
   .contact_infos {
     display: flex;
     flex-wrap: wrap;
-    gap: 3rem;
+    align-items: center;
     justify-content: center;
+    gap: 3rem;
 
     .contact_info {
       text-align: center;
