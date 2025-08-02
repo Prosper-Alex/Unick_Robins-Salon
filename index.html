@@ -8,26 +8,31 @@
     <link
       rel="shortcut icon"
       href="./assets/logo/logo.jpeg"
-      type="image/x-icon" />
+      type="image/x-icon"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
 
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.css" />
+      href="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.css"
+    />
 
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
     <link rel="stylesheet" href="./css/main.css" />
 
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <nav class="navigation center-children--sm" data-aos="fade-down">
@@ -142,7 +147,8 @@
               <figure class="icon scissors-left">
                 <img
                   src="./assets/icons/scissors-left.svg"
-                  alt="scissor-icon" />
+                  alt="scissor-icon"
+                />
               </figure>
 
               <i
@@ -151,12 +157,14 @@
                   --fa-primary-color: #e6b479;
                   --fa-secondary-color: #e8aa64;
                   --fa-secondary-opacity: 0.7;
-                "></i>
+                "
+              ></i>
 
               <figure class="icon scissors-right">
                 <img
                   src="./assets/icons/scissors-right.svg"
-                  alt="scissor-icon" />
+                  alt="scissor-icon"
+                />
               </figure>
             </div>
           </div>
@@ -355,7 +363,8 @@
               <figure class="icon scissors-left">
                 <img
                   src="./assets/icons/scissors-left.svg"
-                  alt="scissor-icon" />
+                  alt="scissor-icon"
+                />
               </figure>
 
               <i
@@ -364,12 +373,14 @@
                   --fa-primary-color: #e6b479;
                   --fa-secondary-color: #e8aa64;
                   --fa-secondary-opacity: 0.7;
-                "></i>
+                "
+              ></i>
 
               <figure class="icon scissors-right">
                 <img
                   src="./assets/icons/scissors-right.svg"
-                  alt="scissor-icon" />
+                  alt="scissor-icon"
+                />
               </figure>
             </div>
           </div>
@@ -479,7 +490,8 @@
                 --fa-primary-color: #e6b479;
                 --fa-secondary-color: #e8aa64;
                 --fa-secondary-opacity: 0.7;
-              "></i>
+              "
+            ></i>
 
             <figure class="icon scissors-right">
               <img src="./assets/icons/scissors-right.svg" alt="scissor-icon" />
@@ -492,7 +504,8 @@
             <img
               src="./assets/img/unick-robin--img.jpeg"
               alt="Logo"
-              Unick-robin--img />
+              Unick-robin--img
+            />
           </figure>
           <div class="team-info">
             <h3 class="heading-tertiary md">Unick Robins</h3>
@@ -516,7 +529,8 @@
               --fa-primary-color: #e6b479;
               --fa-secondary-color: #e8aa64;
               --fa-secondary-opacity: 0.7;
-            "></i>
+            "
+          ></i>
 
           <figure class="icon scissors-right">
             <img src="./assets/icons/scissors-right.svg" alt="scissor-icon" />
@@ -655,7 +669,8 @@
                 --fa-primary-color: #e6b479;
                 --fa-secondary-color: #e8aa64;
                 --fa-secondary-opacity: 0.7;
-              "></i>
+              "
+            ></i>
 
             <figure class="icon scissors-right">
               <img src="./assets/icons/scissors-right.svg" alt="scissor-icon" />
@@ -675,19 +690,23 @@
 
         <div class="booking_form">
           <h3 class="heading-tertiary">BOOK NOW</h3>
-          <form>
-            <input type="text" placeholder="Name" required />
-            <input type="email" placeholder="Email" required />
-            <input type="tel" placeholder="Phone" required />
-            <select required>
+          <form id="bookAppointment">
+            <input
+              type="text"
+              placeholder="Name"
+              name="name"
+              id="name"
+              required
+            />
+            <select required name="service">
               <option value="">Choose Service</option>
-              <option>Locs Maintenance</option>
-              <option>Fresh Locs</option>
-              <option>Locs Installation</option>
-              <option>Barbing</option>
+              <option value="Locs Maintenance">Locs Maintenance</option>
+              <option value="Fresh Locs">Fresh Locs</option>
+              <option value="Locs Installation">Locs Installation</option>
+              <option value="Barbing">Barbing</option>
             </select>
-            <input type="date" required />
-            <input type="time" required />
+            <input type="date" required id="date" />
+            <input type="time" required id="time" />
             <button class="btn-appointment" type="submit">
               MAKE AN APPOINTMENT NOW →
             </button>
@@ -715,7 +734,8 @@
               <figure class="icon scissors-left">
                 <img
                   src="./assets/icons/scissors-left.svg"
-                  alt="scissor-icon" />
+                  alt="scissor-icon"
+                />
               </figure>
 
               <i
@@ -724,12 +744,14 @@
                   --fa-primary-color: #e6b479;
                   --fa-secondary-color: #e8aa64;
                   --fa-secondary-opacity: 0.7;
-                "></i>
+                "
+              ></i>
 
               <figure class="icon scissors-right">
                 <img
                   src="./assets/icons/scissors-right.svg"
-                  alt="scissor-icon" />
+                  alt="scissor-icon"
+                />
               </figure>
             </div>
           </div>
@@ -780,7 +802,8 @@
             src="https://maps.google.com/maps?q=6.504700,3.171100&z=15&output=embed"
             allowfullscreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
         <div class="map-info">
           <div class="contact-info">
@@ -820,7 +843,8 @@
                 --fa-primary-color: #e6b479;
                 --fa-secondary-color: #e8aa64;
                 --fa-secondary-opacity: 0.7;
-              "></i>
+              "
+            ></i>
 
             <figure class="icon scissors-right">
               <img src="./assets/icons/scissors-right.svg" alt="scissor-icon" />
@@ -857,7 +881,8 @@
             <a
               href="https://www.facebook.com/share/1VEaPgjB2F/"
               target="_blank"
-              aria-label="Facebook">
+              aria-label="Facebook"
+            >
               <i class="fab fa-facebook-f"></i>
             </a>
             <a href="https://twitter.com" target="_blank" aria-label="Twitter">
@@ -866,7 +891,8 @@
             <a
               href="https://plus.google.com"
               target="_blank"
-              aria-label="Google Plus">
+              aria-label="Google Plus"
+            >
               <i class="fab fa-google-plus-g"></i>
             </a>
             <a href="https://youtube.com" target="_blank" aria-label="YouTube">
@@ -886,3 +912,5 @@
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </body>
 </html>
+
+<!-- Header / Services / Booking / Pricing / Story / Founder / Testomonial / Contact -->
