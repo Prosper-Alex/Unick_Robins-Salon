@@ -187,8 +187,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeIcon = document.querySelector(".close-icon");
 
   navToggle.addEventListener("click", () => {
-    menuIcon.classList.toggle("hidden");
-    closeIcon.classList.toggle("hidden");
+    menuIcon.classList.toggle("active");
+    closeIcon.classList.toggle("active");
     document.body.classList.toggle("no-scroll");
   });
 });

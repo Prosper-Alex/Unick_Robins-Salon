@@ -740,7 +740,7 @@
   }
 
   .available_textbox {
-    max-width: 400px;
+    max-width: 100%;
     text-align: left;
 
     @include big-phone {
@@ -777,11 +777,11 @@
     padding: 3rem;
     border-radius: 8px;
     width: 100%;
-    max-width: 600px;
+    max-width: 100%;
     text-align: left;
 
     @include phone {
-      max-width: 600px;
+      max-width: 100%;
     }
 
     .heading-tertiary {
