@@ -88,13 +88,13 @@
             <img src="./assets/logo/location-icon.svg" alt="location" />
           </figure>
 
-          <p class="paragraph sm">26 AVENUE, BROOKLIN, NJ-56870</p>
+          <p class="paragraph sm">Anibaba St, Ojo 102101, Lagos</p>
         </div>
         <div class="info-contact">
           <figure class="info-logo">
             <img src="./assets/logo/Call-Icon.svg" alt="call-info" />
           </figure>
-          <p class="paragraph sm">+234 08123456788</p>
+          <p class="paragraph sm">+234 803 089 7425</p>
         </div>
         <div class="info-schedule">
           <figure class="info-logo">
@@ -644,16 +644,22 @@
       <div class="container available_wrapper">
         <div class="available_textbox">
           <h2 class="heading-secondary">WE ARE AVAILABLE</h2>
-          <div class="decor-icons">
-            <img
-              src="./assets/icons/scissors-left.svg"
-              alt="left icon"
-              class="scissors-left" />
-            <i class="fa fa-x"></i>
-            <img
-              src="./assets/icons/scissors-right.svg"
-              alt="right icon"
-              class="scissors-right" />
+          <div class="textbox-icon">
+            <figure class="icon scissors-left">
+              <img src="./assets/icons/scissors-left.svg" alt="scissor-icon" />
+            </figure>
+
+            <i
+              class="fa-duotone fa-solid fa-x fa-flip-both"
+              style="
+                --fa-primary-color: #e6b479;
+                --fa-secondary-color: #e8aa64;
+                --fa-secondary-opacity: 0.7;
+              "></i>
+
+            <figure class="icon scissors-right">
+              <img src="./assets/icons/scissors-right.svg" alt="scissor-icon" />
+            </figure>
           </div>
 
           <ul class="opening-hours">
@@ -675,9 +681,10 @@
             <input type="tel" placeholder="Phone" required />
             <select required>
               <option value="">Choose Service</option>
-              <option>Retwist & Style</option>
+              <option>Locs Maintenance</option>
+              <option>Fresh Locs</option>
+              <option>Locs Installation</option>
               <option>Barbing</option>
-              <option>Instant Locs</option>
             </select>
             <input type="date" required />
             <input type="time" required />
@@ -766,12 +773,37 @@
       </div>
     </section>
 
-    <section class="map-section" id="location">
-      <iframe
-        src="https://maps.google.com/maps?q=6.504700,3.171100&z=15&output=embed"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <section class="map-section center-children--bg" id="location">
+      <div class="map-wrapper">
+        <div class="map">
+          <iframe
+            src="https://maps.google.com/maps?q=6.504700,3.171100&z=15&output=embed"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="map-info">
+          <div class="contact-info">
+            <h3 class="heading-tertiary accent-color sm">Location</h3>
+            <p class="paragraph rm">26 Avenue, Brooklin, NJ-56870</p>
+          </div>
+
+          <div class="contact-info">
+            <h3 class="heading-tertiary accent-color sm">Call us</h3>
+            <p class="paragraph rm">+234 803 089 7425</p>
+          </div>
+
+          <div class="contact-info">
+            <h3 class="heading-tertiary accent-color sm">Email us</h3>
+            <p class="paragraph rm">unickrobins@gmail.com</p>
+          </div>
+
+          <div class="contact-info">
+            <h3 class="heading-tertiary accent-color sm">Hours</h3>
+            <p class="paragraph rm">Monday - Saturday: 9.00AM - 5.00PM</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer class="footer">
@@ -823,13 +855,13 @@
           </form>
           <div class="social_icons">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/share/1VEaPgjB2F/"
               target="_blank"
               aria-label="Facebook">
               <i class="fab fa-facebook-f"></i>
             </a>
             <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-              <i class="fab fa-twitter"></i>
+              <i class="fab fa-in"></i>
             </a>
             <a
               href="https://plus.google.com"

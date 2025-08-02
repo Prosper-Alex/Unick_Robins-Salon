@@ -885,6 +885,12 @@
     @include phone {
       padding: 1.25rem 2rem;
     }
+
+    .btn-member {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
   }
 }
 
@@ -989,15 +995,42 @@
 
 .map-section {
   margin: 10rem 0;
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 60vh; // modern and responsive height
   filter: grayscale(40%) brightness(90%);
-  border-top: 3px solid #c89b6f;
 
-  iframe {
+  .map-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
     width: 100%;
-    height: 100%;
-    border: none;
-    filter: grayscale(20%) brightness(95%); // slight style enhancement
+
+    .map {
+      height: 45vh;
+      width: 100%;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      filter: grayscale(20%) brightness(95%);
+      border-radius: $border-radius-sm; // slight style enhancement
+    }
+
+    .map-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 100%;
+
+      .contact-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
   }
 }
