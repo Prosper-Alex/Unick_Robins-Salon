@@ -380,49 +380,46 @@
     }
   }
 
-  &_blog--wrapper {
+  .testimonial_blog--wrapper {
     .test_blog {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 6rem;
+      gap: 1.5rem;
       text-align: center;
       margin: 4rem 0;
       position: relative;
       z-index: 10;
 
-      .test_blog--img {
-        height: 10rem;
-        width: 10rem;
-
-        img {
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-          border-radius: 50%;
-        }
+      .heading-tertiary.md.md {
+        margin-top: 1rem;
       }
 
-      .test_blog--text {
+      .rate-icons {
+        color: #ccc; // Default color for stars
         display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        .heading-tertiary.rm {
+        align-items: center;
+        gap: 0.5rem;
+
+        @include big-phone {
           color: $accent-color;
-          @include phone {
-            font-size: 1.8rem;
+        }
+
+        i {
+          font-size: 1.4rem;
+          cursor: pointer;
+          transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+          &:hover {
+            color: $accent-color;
+            transform: scale(1.2);
+
+            @include big-phone {
+              color: #ccc;
+            }
           }
         }
-        .paragraph.sm {
-          width: 70%;
-          margin: 0 auto;
-        }
-      }
-
-      .test_blog--logo {
-        font-size: 15rem;
-        margin-top: 3rem;
       }
     }
   }
