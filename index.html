@@ -100,7 +100,7 @@
           <figure class="info-logo">
             <img src="./assets/logo/time-icon.svg" alt="time-schedule" />
           </figure>
-          <p class="paragraph sm">MONDAY - FRIDAY: 9.00AM - 17.00PM</p>
+          <p class="paragraph sm">MONDAY - SATURDAY: 9.00AM - 18.00PM</p>
         </div>
       </div>
     </header>
@@ -350,7 +350,6 @@
             <li><span>Sunday</span><span>CLOSED</span></li>
           </ul>
         </div>
-
         <div class="booking_form">
           <h3 class="heading-tertiary">BOOK NOW</h3>
           <form id="bookAppointment">
@@ -372,13 +371,48 @@
               <option value="Fresh Locs">Fresh Locs</option>
               <option value="Locs Installation">Locs Installation</option>
               <option value="Barbing">Barbing</option>
+              <option value="Locs Maintenance - Home Service">
+                Locs Maintenance - Home Service
+              </option>
+              <option value="Fresh Locs - Home Service">
+                Fresh Locs - Home Service
+              </option>
+              <option value="Locs Installation - Home Service">
+                Locs Installation - Home Service
+              </option>
+              <option value="Barbing - Home Service">
+                Barbing - Home Service
+              </option>
             </select>
-            <input type="date" placeholder="Date" required id="date" />
+            <input
+              type="date"
+              placeholder="Date"
+              name="date"
+              id="date"
+              min="" />
             <input type="time" placeholder="Time" required id="time" />
             <button class="btn-appointment" type="submit">
               MAKE AN APPOINTMENT NOW →
             </button>
           </form>
+        </div>
+
+        <!-- Modal -->
+        <div id="payment-modal" class="modal-overlay hidden">
+          <div class="modal-content">
+            <p>
+              <strong>NOTE:</strong> To validate your appointment, 50% of your
+              supposed payment has to be made.<br />Thank you! 🙏
+            </p>
+            <div class="modal-buttons">
+              <button id="confirm-payment" class="btn-modal-confirm">
+                Continue
+              </button>
+              <button id="cancel-payment" class="btn-modal-cancel">
+                Cancel
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -638,7 +672,7 @@
 
               <h3 class="heading-tertiary md">Dozie Anowl</h3>
 
-              <p class="paragraph sm">Best In The Game💯</p>
+              <p class="paragraph sm">Best In The Game 💯</p>
             </div>
             <div class="test_blog swiper-slide">
               <figure class="rate-icons">
@@ -651,7 +685,7 @@
 
               <h3 class="heading-tertiary md">William Chukwaemaka</h3>
 
-              <p class="paragraph sm">Best Service❤️.</p>
+              <p class="paragraph sm">Best Service ❤️</p>
             </div>
 
             <div class="test_blog swiper-slide">

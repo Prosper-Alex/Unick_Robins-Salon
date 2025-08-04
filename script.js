@@ -110,41 +110,70 @@ const serviceValue = document.querySelector("#bookAppointment select");
 const dateValue = document.getElementById("date");
 const timeValue = document.getElementById("time");
 
-const receiverPhoneNumber = "2348030897425"; // YOUR WhatsApp number
+const paymentModal = document.getElementById("payment-modal");
+const confirmPaymentBtn = document.getElementById("confirm-payment");
+const cancelPaymentBtn = document.getElementById("cancel-payment");
 
+const receiverPhoneNumber = "2348030897425"; // Your WhatsApp number
+
+let appointmentDetails = {};
+
+// Set minimum date to tomorrow in the date input
+window.addEventListener("DOMContentLoaded", () => {
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  const isoDate = tomorrow.toISOString().split("T")[0];
+  dateValue.setAttribute("min", isoDate);
+});
+
+// Handle form submission
 bookAppointmentForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const name = nameValue.value.trim();
-  const userPhoneNumber = phoneNumberValue.value.trim();
+  const phone = phoneNumberValue.value.trim();
   const service = serviceValue.value.trim();
   const date = dateValue.value.trim();
   const time = timeValue.value.trim();
 
-  if (!name || !userPhoneNumber || !service || !date || !time) {
+  if (!name || !phone || !service || !date || !time) {
     alert("Please fill in all fields.");
     return;
   }
 
   const selectedDate = new Date(date);
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
+  const tomorrow = new Date();
+  tomorrow.setHours(0, 0, 0, 0);
+  tomorrow.setDate(tomorrow.getDate() + 1); // Minimum valid date is tomorrow
 
-  if (selectedDate < today) {
-    alert("Please select a valid date that is not in the past.");
+  if (selectedDate < tomorrow) {
+    alert("Appointments must be scheduled at least a day in advance.");
     return;
   }
 
-  const dateString = new Date(date).toDateString();
+  // Save data to global object
+  appointmentDetails = {
+    name,
+    phone,
+    service,
+    date: selectedDate.toDateString(),
+    time,
+  };
 
+  // Show modal
+  paymentModal.classList.remove("hidden");
+});
+
+// Handle confirm button in modal
+confirmPaymentBtn.addEventListener("click", () => {
   const message = `
 Hello, I would like to book an appointment.
 
-Name: ${name}
-Phone Number: ${userPhoneNumber}
-Service: ${service}
-Date: ${dateString}
-Time: ${time}
+Name: ${appointmentDetails.name}
+Phone Number: ${appointmentDetails.phone}
+Service: ${appointmentDetails.service}
+Date: ${appointmentDetails.date}
+Time: ${appointmentDetails.time}
 
 Thank you!
   `;
@@ -155,31 +184,22 @@ Thank you!
 
   window.open(whatsappUrl, "_blank");
   bookAppointmentForm.reset();
+  paymentModal.classList.add("hidden");
   alert("Your appointment request has been sent!");
 });
 
-const appointmentDetails = {
-  name: "Prosper Alex",
-  phoneNumber: "08119638793",
-  service: "Jungle Locks",
-  date: "13 August, 2024",
-  time: "13:00 PM",
-};
+// Handle cancel button in modal
+cancelPaymentBtn.addEventListener("click", () => {
+  paymentModal.classList.add("hidden");
+});
 
-const whatsappMessage = `
-Hello, I'd like to book an appointment.
-
-Name: ${appointmentDetails.name}
-Phone Number: ${appointmentDetails.phoneNumber}
-Service: ${appointmentDetails.service}
-Date: ${appointmentDetails.date}
-Time: ${appointmentDetails.time}
-
-Thank you!
-`;
-
-console.log(whatsappMessage);
-
+// const appointmentDetails = {
+//   name: "Prosper Alex",
+//   phoneNumber: "08119638793",
+//   service: "Jungle Locks",
+//   date: "13 August, 2024",
+//   time: "13:00 PM",
+// };
 // NAV TOGGLE
 document.addEventListener("DOMContentLoaded", () => {
   const navToggle = document.querySelector(".nav_toggle");
