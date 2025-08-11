@@ -121,7 +121,7 @@ let appointmentDetails = {};
 // Set minimum date to tomorrow in the date input
 window.addEventListener("DOMContentLoaded", () => {
   const tomorrow = new Date();
-  tomorrow.setDate(tomorrow.getDate() + 1);
+  tomorrow.setDate(tomorrow.getDate() + 2);
   const isoDate = tomorrow.toISOString().split("T")[0];
   dateValue.setAttribute("min", isoDate);
 });
