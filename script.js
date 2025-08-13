@@ -175,6 +175,7 @@ Service: ${appointmentDetails.service}
 Date: ${appointmentDetails.date}
 Time: ${appointmentDetails.time}
 
+
 Thank you!
   `;
 
