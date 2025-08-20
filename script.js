@@ -27,7 +27,7 @@ new Swiper(".service_image--wrapper", {
   breakpoints: {
     600: { slidesPerView: 1 },
     980: { slidesPerView: 3 },
-    1025: { slidesPerView: 4 },
+    1025: { slidesPerView: 5 },
   },
 });
 
