@@ -5,6 +5,15 @@
 
 .about {
   margin: 15rem 0;
+  background-color: $surface-blush;
+
+  @include phone {
+    margin: 4rem 1.2rem;
+    padding: 4rem 1.6rem;
+    border: 1px solid $border-gold;
+    border-radius: $border-radius-sm;
+  }
+
   &_wrapper {
     display: flex;
     justify-content: center;
@@ -45,11 +54,12 @@
         font-size: 1.6rem;
         padding: 1rem 2.4rem;
         background-color: $accent-color;
-        color: $white;
-        border-radius: $border-radius-rm;
+        color: $primary-color;
+        border-radius: 999px;
         transition: all 0.3s ease;
         margin: 3rem 0;
         width: fit-content;
+        box-shadow: $btn-shadow;
 
         @include tab-port {
           margin: 3rem auto; // center the button horizontally
@@ -64,7 +74,7 @@
           box-shadow: $btn-shadow--hover;
           box-shadow: $btn-shadow;
           transform: scale(1.05);
-          background-color: darken($accent-color, 10%);
+          background-color: $accent-gold-bright;
         }
 
         &:active {
@@ -113,6 +123,10 @@
       object-fit: cover;
       border-radius: $border-radius-rm;
     }
+
+    @include phone {
+      height: 34rem;
+    }
   }
 }
 
@@ -120,10 +134,21 @@
 
 .service {
   margin: 15rem 0;
-  background-color: $alice-blue;
+  background-color: $surface-lavender;
+
+  @include phone {
+    margin: 4rem 1.2rem;
+    border: 1px solid $border-gold;
+    border-radius: $border-radius-sm;
+    overflow: hidden;
+  }
 
   &_wrapper {
     padding: 6rem 0;
+
+    @include phone {
+      padding: 4rem 0;
+    }
   }
 
   &_content {
@@ -170,10 +195,18 @@
       padding: 2rem;
       border-radius: $border-radius-sm;
       box-sizing: border-box;
+      border: 1px solid $border-color;
+      box-shadow: 0 1.4rem 3rem rgba(36, 16, 47, 0.08);
+
+      @include phone {
+        height: auto;
+        min-height: 52rem;
+        padding: 1.6rem;
+      }
     }
 
     .white-bg {
-      background-color: $white;
+      background-color: $surface-card;
     }
 
     .swiper-slide {
@@ -210,7 +243,7 @@
       width: 100%;
 
       .heading-tertiary.md {
-        color: $accent-color;
+        color: $brand-aubergine;
         text-transform: uppercase;
         margin-bottom: 1.5rem;
       }
@@ -224,8 +257,8 @@
         font-size: 1.6rem;
         padding: 1rem 2.4rem;
         background-color: $accent-color;
-        color: $white;
-        border-radius: $border-radius-rm;
+        color: $primary-color;
+        border-radius: 999px;
         transition: all 0.3s ease;
         margin: 3rem auto;
         width: fit-content;
@@ -239,7 +272,7 @@
           box-shadow: $btn-shadow--hover;
           box-shadow: $btn-shadow;
           transform: scale(1.05);
-          background-color: darken($accent-color, 10%);
+          background-color: $accent-gold-bright;
         }
 
         &:active {
@@ -273,7 +306,7 @@
       }
 
       .swiper-pagination-bullet-active {
-        background-color: darken($accent-color, 10%);
+        background-color: $brand-violet;
         opacity: 1;
         transform: scale(1.3);
       }
@@ -284,7 +317,9 @@
 // TESTIMONIAL
 
 .testimonial {
-  background-image: url(/assets/img/testimonial-bg.jpg);
+  background:
+    linear-gradient(rgba(249, 240, 255, 0.9), rgba(253, 240, 248, 0.92)),
+    url(/assets/img/testimonial-bg.jpg);
   background-size: cover;
   background-position: center;
   height: 65rem;
@@ -292,9 +327,19 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  color: #fff;
+  color: $brand-aubergine;
   padding: 4rem;
   margin: 10rem 0;
+
+  @include phone {
+    height: auto;
+    min-height: auto;
+    margin: 4rem 1.2rem;
+    padding: 3.2rem 1.2rem;
+    border: 1px solid $border-gold;
+    border-radius: $border-radius-sm;
+    overflow: hidden;
+  }
 
   @include tab-land--sm {
     background-attachment: fixed;
@@ -307,7 +352,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(255, 248, 240, 0.08);
     z-index: 1;
   }
 
@@ -324,7 +369,15 @@
 
   &_blog {
     display: flex;
+    width: min(100%, 46rem);
     max-width: 100vw;
+    margin: 0 auto;
+
+    @include phone {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 3.6rem 3rem;
+    }
 
     .testimonial-pagination {
       position: absolute;
@@ -349,7 +402,7 @@
       }
 
       :active {
-        background-color: darken($accent-color, 10%);
+        background-color: $accent-gold-bright;
         opacity: 1;
         transform: scale(1.3);
       }
@@ -367,12 +420,12 @@
         width: 0.8rem;
         height: 0.8rem;
         border-radius: 50%;
-        background-color: lighten($secondary-color, 20%);
+        background-color: $accent-color;
         opacity: 0.5;
         transition: all 0.3s ease;
 
         &-active {
-          background-color: $secondary-color;
+          background-color: $brand-violet;
           opacity: 1;
           transform: scale(1.2);
         }
@@ -381,6 +434,8 @@
   }
 
   .testimonial_blog--wrapper {
+    align-items: center;
+
     .test_blog {
       display: flex;
       flex-direction: column;
@@ -392,12 +447,33 @@
       position: relative;
       z-index: 10;
 
+      @include phone {
+        width: 100%;
+        max-width: none;
+        min-height: 23rem;
+        margin: 1.5rem auto;
+        padding: 2rem 1.6rem;
+        box-sizing: border-box;
+        border: 1px solid rgba(214, 178, 94, 0.28);
+        border-radius: $border-radius-sm;
+        background-color: rgba(255, 248, 240, 0.72);
+        box-shadow: 0 1.4rem 3rem rgba(26, 8, 36, 0.1);
+      }
+
       .heading-tertiary.md.md {
         margin-top: 1rem;
       }
 
+      .heading-tertiary {
+        color: $brand-aubergine;
+      }
+
+      .paragraph {
+        color: $secondary-color;
+      }
+
       .rate-icons {
-        color: #ccc; // Default color for stars
+        color: $accent-color; // Default color for stars
         display: flex;
         align-items: center;
         gap: 0.5rem;
@@ -416,7 +492,7 @@
             transform: scale(1.2);
 
             @include big-phone {
-              color: #ccc;
+              color: $accent-gold-bright;
             }
           }
         }
@@ -432,7 +508,7 @@
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      background-color: $secondary-color;
+      background-color: $primary-color;
       color: $white;
       cursor: pointer;
       padding: 2rem;
@@ -446,6 +522,10 @@
       &.swiper-button-next {
         animation: bounce-horizontal 1.5s ease-in-out infinite;
 
+        @include phone {
+          right: 0.5rem;
+        }
+
         @include bg-desktop {
           margin-right: 2rem;
         }
@@ -454,6 +534,11 @@
       &.swiper-button-prev {
         animation: bounce-horizontal 1.5s ease-in-out infinite;
         animation-direction: alternate-reverse;
+
+        @include phone {
+          left: 0.5rem;
+        }
+
         @include bg-desktop {
           margin-left: 2rem;
         }
@@ -467,6 +552,10 @@
   margin: 15rem 0;
   text-align: center;
 
+  @include phone {
+    margin: 4rem 1.2rem;
+  }
+
   &_wrapper {
     display: flex;
     flex-direction: column;
@@ -477,7 +566,7 @@
     .textbox {
       .heading-secondary.bg {
         text-transform: uppercase;
-        letter-spacing: 0.1px;
+        letter-spacing: 0;
       }
     }
   }
@@ -490,6 +579,7 @@
     align-items: center;
 
     background-color: $primary-color;
+    border: 1px solid $border-gold;
     border-radius: $border-radius-sm;
 
     @include tab-port {
@@ -508,6 +598,10 @@
       height: 50vh;
       width: 100%;
 
+      @include phone {
+        height: 36rem;
+      }
+
       img {
         width: 100%;
         height: 100%;
@@ -523,6 +617,10 @@
       gap: 3rem;
       padding: 5rem 4rem;
 
+      @include phone {
+        padding: 3rem 2rem;
+      }
+
       .heading-tertiary.md {
         color: $white;
       }
@@ -534,14 +632,16 @@
 }
 
 .pricing-section {
-  background: url(/assets/img/testimonial-bg.jpg) center / cover no-repeat;
+  background:
+    linear-gradient(rgba(26, 8, 36, 0.84), rgba(36, 16, 47, 0.84)),
+    url(/assets/img/testimonial-bg.jpg) center / cover no-repeat;
   background-size: cover;
   display: flex;
   background-position: center;
   flex-direction: column;
   position: relative;
   justify-content: space-around;
-  color: #fff;
+  color: $white;
   padding: 6rem 2rem;
   margin: 15rem 0;
   height: 100%;
@@ -549,6 +649,11 @@
   @include phone {
     display: flex;
     justify-content: center;
+    margin: 4rem 1.2rem;
+    padding: 4rem 1.6rem;
+    border: 1px solid $border-gold;
+    border-radius: $border-radius-sm;
+    overflow: hidden;
   }
 
   &::before {
@@ -558,7 +663,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(26, 8, 36, 0.18);
   }
 
   > * {
@@ -574,7 +679,7 @@
     text-align: center;
     margin-bottom: 2rem;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0;
     color: $white;
   }
 
@@ -596,18 +701,30 @@
     gap: 2rem;
     margin-bottom: 4rem;
 
+    @include phone {
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
     .tab-btn {
       padding: 1rem 2rem;
       border: none;
       font-size: 1.6rem;
       cursor: pointer;
       background-color: #e2d4c0;
+      color: $brand-aubergine;
       border-radius: 8px;
       transition: all 0.3s ease;
 
+      @include phone {
+        flex: 1 1 calc(50% - 1rem);
+        min-width: 13rem;
+      }
+
       &.active {
-        background-color: #c19a6b;
-        color: white;
+        background-color: $accent-color;
+        color: $primary-color;
       }
     }
   }
@@ -640,17 +757,22 @@
       }
 
       .pricing-card {
-        background-color: #fff;
+        background-color: $surface-card;
         padding: 2rem;
         border-radius: 10px;
         width: 300px;
         margin-bottom: 1.75rem;
         text-align: center;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border: 1px solid $border-gold;
+        box-shadow: 0 1rem 3rem rgba(26, 8, 36, 0.18);
+
+        @include phone {
+          width: min(100%, 34rem);
+        }
 
         h3 {
           font-size: 1.8rem;
-          color: #333;
+          color: $brand-aubergine;
           margin-bottom: 1rem;
         }
 
@@ -699,7 +821,7 @@
     .btn-appointment {
       padding: 1.5rem 3rem;
       background-color: $accent-color;
-      color: white;
+      color: $primary-color;
       font-size: 1.6rem;
       border: none;
       border-radius: 8px;
@@ -723,6 +845,13 @@
   color: $white;
   padding: 8rem 2rem;
   text-align: center;
+
+  @include phone {
+    margin: 4rem 1.2rem;
+    padding: 4rem 1.6rem;
+    border: 1px solid $border-gold;
+    border-radius: $border-radius-sm;
+  }
 
   .heading-secondary {
     font-size: 3rem;
@@ -752,10 +881,29 @@
   .available_textbox {
     max-width: 100%;
     text-align: left;
+    padding: 3rem;
+    background:
+      linear-gradient(180deg, rgba(255, 248, 223, 0.72), rgba(251, 248, 251, 0.98)),
+      $surface-card;
+    border: 1px solid $border-gold;
+    border-radius: $border-radius-sm;
+    box-shadow: 0 2rem 5rem rgba(26, 8, 36, 0.18);
 
     @include big-phone {
-      display: contents;
+      display: block;
       width: 100%;
+    }
+
+    @include phone {
+      padding: 2rem;
+    }
+
+    .heading-secondary {
+      color: $brand-aubergine;
+    }
+
+    .textbox-icon {
+      margin-bottom: 2.5rem;
     }
 
     .opening-hours {
@@ -763,13 +911,33 @@
       padding: 0;
       margin: 0;
       font-size: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
 
       li {
         display: flex;
         justify-content: space-between;
-        padding: 0.8rem 0;
-        border-bottom: 1px dotted #aaa;
-        color: #ccc;
+        gap: 2rem;
+        padding: 1.15rem 1.3rem;
+        border: 1px solid $border-color;
+        border-radius: 8px;
+        background-color: rgba(255, 248, 240, 0.72);
+        color: $brand-aubergine;
+
+        @include phone {
+          gap: 1rem;
+          padding: 1rem;
+        }
+
+        &:last-child {
+          border-color: rgba(214, 178, 94, 0.52);
+          background-color: rgba(246, 231, 183, 0.54);
+        }
+
+        span {
+          color: inherit;
+        }
 
         span:first-child {
           text-transform: capitalize;
@@ -777,21 +945,26 @@
 
         span:last-child {
           font-weight: bold;
+          color: $accent-bronze;
+          text-align: right;
         }
       }
     }
   }
 
   .booking_form {
-    background-color: $accent-color--light;
+    background-color: $surface-card;
     padding: 3rem;
-    border-radius: 8px;
+    border: 1px solid $border-gold;
+    border-radius: $border-radius-sm;
+    box-shadow: 0 2rem 5rem rgba(26, 8, 36, 0.18);
     width: 100%;
     max-width: 100%;
     text-align: left;
 
     @include phone {
       max-width: 100%;
+      padding: 2rem;
     }
 
     .heading-tertiary {
@@ -799,6 +972,7 @@
       font-weight: bold;
       margin-bottom: 2rem;
       color: $white;
+      color: $brand-aubergine;
     }
 
     form {
@@ -811,8 +985,11 @@
         font-size: 1.4rem;
         margin-bottom: 1.2rem;
         border: none;
-        border-radius: 4px;
+        border: 1px solid $border-color;
+        border-radius: 8px;
         outline: none;
+        background-color: $surface-blush;
+        color: $brand-aubergine;
       }
 
       .btn-appointment {
@@ -820,14 +997,14 @@
         font-size: 1.3rem;
         font-weight: 600;
         background-color: $primary-color;
-        color: #fff;
+        color: $white;
         border: none;
         border-radius: 4px;
         cursor: pointer;
         transition: background-color 0.3s ease;
 
         &:hover {
-          background-color: #111;
+          background-color: $brand-violet;
         }
       }
     }
@@ -837,7 +1014,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(26, 8, 36, 0.82);
     width: 100%;
     height: 100%;
     z-index: 9999;
@@ -847,19 +1024,19 @@
   }
 
   .modal-content {
-    background-color: $accent-color--light;
+    background-color: $surface-card;
     padding: 2rem;
     border-radius: 8px;
     width: 90%;
     max-width: 400px;
     text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
-    color: #333;
+    box-shadow: 0 2rem 5rem rgba(26, 8, 36, 0.22);
+    color: $brand-aubergine;
 
     p {
       font-size: 1.4rem;
       margin-bottom: 2rem;
-      color: #222;
+      color: $secondary-color;
     }
 
     .modal-buttons {
@@ -881,16 +1058,16 @@
 
     .btn-modal-confirm {
       background-color: $primary-color;
-      color: #fff;
+      color: $white;
 
       &:hover {
-        background-color: #000;
+        background-color: $brand-violet;
       }
     }
 
     .btn-modal-cancel {
-      background-color: #ccc;
-      color: #000;
+      background-color: $accent-color--light;
+      color: $brand-aubergine;
     }
   }
 
@@ -902,12 +1079,19 @@
 // SECTION MEMBER
 
 .member {
-  margin: 10rem 0 15rem 0;
+  margin: 8rem 0 0;
   padding: 5rem;
   background-color: $primary-color;
+  border-top: 1px solid $border-gold;
+  border-bottom: 1px solid $border-gold;
 
   @include medium-phone {
     padding: 3rem;
+  }
+
+  @include phone {
+    margin: 4rem 1.2rem 0;
+    border-radius: $border-radius-sm $border-radius-sm 0 0;
   }
   &_content {
     display: flex;
@@ -926,6 +1110,11 @@
       align-items: center;
       color: $white;
       text-transform: uppercase;
+      text-align: center;
+
+      .heading-tertiary {
+        color: $white;
+      }
     }
   }
 
@@ -934,7 +1123,7 @@
     display: flex;
     align-items: center;
     background-color: $accent-color;
-    color: white;
+    color: $primary-color;
     font-size: 1.6rem;
     border: none;
     border-radius: 8px;
@@ -951,27 +1140,34 @@
       display: flex;
       gap: 0.5rem;
       align-items: center;
+      color: $primary-color;
     }
   }
 }
 
 // SECTION CONTACT
 .contact {
-  background: url(/assets/img/contact-img.jpg) center / cover no-repeat;
+  background:
+    linear-gradient(rgba(26, 8, 36, 0.76), rgba(36, 16, 47, 0.72)),
+    url(/assets/img/contact-img.jpg) center / cover no-repeat;
   background-size: cover;
   display: flex;
   background-position: center;
   flex-direction: column;
   position: relative;
   justify-content: space-around;
-  color: #fff;
+  color: $white;
   padding: 6rem 2rem;
-  margin: 10rem 0;
+  margin: 0 0 8rem;
   height: 100%;
 
   @include phone {
     display: flex;
     justify-content: center;
+    margin: 0 1.2rem 4rem;
+    padding: 4rem 1.6rem;
+    border-radius: 0 0 $border-radius-sm $border-radius-sm;
+    overflow: hidden;
   }
 
   &::before {
@@ -981,7 +1177,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(26, 8, 36, 0.2);
   }
 
   .contact_wrapper {
@@ -996,6 +1192,10 @@
   .textbox {
     text-align: center;
     text-transform: uppercase;
+
+    .heading-secondary {
+      color: $white;
+    }
   }
 
   .contact_infos {
@@ -1010,6 +1210,11 @@
       max-width: 200px;
       animation: fadeInScale 2s ease both;
       text-transform: uppercase;
+
+      @include phone {
+        width: 100%;
+        max-width: 34rem;
+      }
 
       .info-logo {
         height: 5rem;
@@ -1035,10 +1240,15 @@
       h3 {
         font-size: 1.4rem;
         margin-bottom: 0.5rem;
+        color: $accent-gold-bright;
       }
 
       .paragraph.md {
         margin-top: 0.75rem;
+      }
+
+      .paragraph {
+        color: rgba(255, 248, 223, 0.78);
       }
 
       a {
@@ -1061,7 +1271,17 @@
   align-items: center;
   width: 100%;
   height: 60vh; // modern and responsive height
-  filter: grayscale(40%) brightness(90%);
+  filter: saturate(85%) brightness(98%);
+
+  @include phone {
+    margin: 4rem 1.2rem;
+    width: auto;
+    height: auto;
+    padding: 1.2rem !important;
+    border: 1px solid $border-gold;
+    border-radius: $border-radius-sm;
+    background-color: $primary-color;
+  }
 
   .map-wrapper {
     display: grid;
@@ -1074,9 +1294,17 @@
       gap: 3rem;
     }
 
+    @include phone {
+      gap: 1.6rem;
+    }
+
     .map {
       height: 45vh;
       width: 100%;
+
+      @include phone {
+        height: 21rem;
+      }
     }
 
     iframe {
@@ -1094,10 +1322,39 @@
       width: 100%;
       gap: 2rem;
 
+      @include phone {
+        gap: 1rem;
+      }
+
       .contact-info {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include phone {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          gap: 0.35rem;
+          padding: 1.15rem 1.25rem;
+          border: 1px solid rgba(214, 178, 94, 0.18);
+          border-radius: 1rem;
+          background-color: rgba(255, 248, 223, 0.06);
+        }
+
+        .heading-tertiary {
+          color: $accent-gold-bright;
+        }
+
+        .paragraph {
+          color: rgba(255, 248, 223, 0.74);
+
+          @include phone {
+            max-width: 58%;
+            margin-left: auto;
+            text-align: right;
+          }
+        }
       }
     }
   }

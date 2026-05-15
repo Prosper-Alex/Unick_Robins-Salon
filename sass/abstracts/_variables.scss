@@ -1,17 +1,28 @@
-$primary-color: #0a0a0a; /* Deep Black – for header, hero text */
-$secondary-color: #737373; /* Mid Gray – for body text */
-$accent-color: #c19a6b; /* Warm Tan – button hover, accents */
-$accent-color--light: #c89d63; /* Warm Tan – button hover, accents */
-$light-bg-color: #f5f5f5; /* Very Light Gray – page background */
-$border-color: #e0e0e0; /* Subtle Gray – dividers and borders */
-$white: #ffffff; /* Clean white for sections, typography */
-$alice-blue: #edf3f7;
+$primary-color: #1a0824; /* Deep Plum – luxury anchor */
+$secondary-color: #65526d; /* Muted Violet – body text */
+$accent-color: #d6b25e; /* Champagne Gold – CTAs and accents */
+$accent-color--light: #f6e7b7; /* Pale Gold Cream – elevated panels */
+$light-bg-color: #4b1f61; /* Rich Violet – project background */
+$border-color: rgba(36, 16, 47, 0.12); /* Soft plum border */
+$white: #fff8df; /* Warm Ivory */
+$alice-blue: #f9f0ff;
 
-$subtle-grey: #1a1a1a;
+$brand-aubergine: #24102f;
+$brand-violet: #4b1f61;
+$surface-ivory: #fff8df;
+$surface-blush: #fff8f0;
+$surface-card: #fbf8fb;
+$surface-pink: #fdf0f8;
+$surface-lavender: #f9f0ff;
+$accent-gold-bright: #f6d87f;
+$accent-bronze: #8b5a00;
+$border-gold: rgba(214, 178, 94, 0.35);
+
+$subtle-grey: #24102f;
 // Font colors
-$accent-text-color: #1a191e;
-$accent-text-color-fade: #1a191e85;
-$text-color-light: #1a191e80;
+$accent-text-color: #24102f;
+$accent-text-color-fade: rgba(36, 16, 47, 0.7);
+$text-color-light: #65526d;
 $primary-font: "Oswald", sans-serif;
 
 // GREY COLORS
@@ -23,13 +34,13 @@ $border-radius-rm: 7px;
 
 // Box-Shadow for button
 
-$btn-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.25);
-$btn-shadow--hover: 8px 8px 0px 0px rgba(0, 0, 0, 0.25);
-$btn-shadow--clicked: 1.5px 1.5px 0px 0px rgba(0, 0, 0, 0.25);
+$btn-shadow: 0 1.4rem 3rem rgba(26, 8, 36, 0.12);
+$btn-shadow--hover: 0 1.8rem 3.6rem rgba(26, 8, 36, 0.18);
+$btn-shadow--clicked: 0 0.6rem 1.4rem rgba(26, 8, 36, 0.14);
 
-$black-shadow: 6px 6px 0px 0px rgba(0, 0, 0);
-$black-shadow-hover: 8px 8px 0px 0px rgba(0, 0, 0);
-$black-shadow--clicked: 1.5px 1.5px 0px 0px rgba(0, 0, 0);
+$black-shadow: 0 1.4rem 3rem rgba(26, 8, 36, 0.16);
+$black-shadow-hover: 0 1.8rem 3.8rem rgba(26, 8, 36, 0.22);
+$black-shadow--clicked: 0 0.6rem 1.4rem rgba(26, 8, 36, 0.16);
 
 $drop-shadow: 6px 6px 0px 0px rgba(129, 173, 200, 1);
 $drop-shadow--hover: 8px 8px 0px 0px rgba(129, 173, 200, 1);

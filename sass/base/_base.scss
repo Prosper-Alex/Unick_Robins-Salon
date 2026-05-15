@@ -9,17 +9,47 @@
 
 body {
   box-sizing: border-box;
-
+  background:
+    radial-gradient(circle at top, rgba(246, 216, 127, 0.12), transparent 34rem),
+    linear-gradient(180deg, $brand-violet 0%, $primary-color 100%);
+  color: $accent-text-color;
   font-family: $primary-font;
   font-size: 1.6rem;
   line-height: 2.4rem;
   font-weight: 400;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
   overflow-x: hidden;
+}
+
+:root {
+  --background: #4b1f61;
+  --foreground: #24102f;
+  --brand-plum: #1a0824;
+  --brand-aubergine: #24102f;
+  --brand-violet: #4b1f61;
+  --surface-ivory: #fff8df;
+  --surface-blush: #fff8f0;
+  --surface-pink: #fdf0f8;
+  --surface-lavender: #f9f0ff;
+  --surface-card: #fbf8fb;
+  --text-primary: #24102f;
+  --text-muted: #65526d;
+  --text-on-dark: #fff8df;
+  --accent-gold: #d6b25e;
+  --accent-gold-bright: #f6d87f;
+  --accent-gold-soft: #f6e7b7;
+  --accent-bronze: #8b5a00;
+  --border-soft: rgba(36, 16, 47, 0.12);
+  --border-gold: rgba(214, 178, 94, 0.35);
+  --radius: 14px;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 9rem;
 }
 
 // h1,
@@ -31,7 +61,7 @@ html {
 a {
   text-decoration: none;
   color: $white;
-  letter-spacing: -0.5px;
+  letter-spacing: 0;
 
   @include tab-port {
     color: $white;
@@ -40,13 +70,13 @@ a {
 
 li {
   list-style: none;
-  color: $white;
-  letter-spacing: -0.5px;
+  color: inherit;
+  letter-spacing: 0;
 }
 button {
   border: none;
   background-color: transparent;
-  letter-spacing: -0.5px;
+  letter-spacing: 0;
 }
 
 p,

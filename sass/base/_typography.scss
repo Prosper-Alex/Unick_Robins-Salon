@@ -4,9 +4,14 @@
 html {
   font-size: 62.5%; // 1rem = 10px
 
-  @include tab-port {
-    // 1rem = 8px, (8/16) * 100
-    font-size: 50%;
+  @include bg-desktop {
+    // 1rem = 12px, (12/16) * 100
+    font-size: 72%;
+  }
+
+  @include sm-desktop {
+    // 1rem = 9.4px, (9.4/16) * 100
+    font-size: 59%;
   }
 
   @include tab-land {
@@ -14,14 +19,9 @@ html {
     font-size: 56.25%;
   }
 
-  @include sm-desktop {
-    // 1rem = 12px, (12/16) * 100
-    font-size: 59%;
-  }
-
-  @include bg-desktop {
-    // 1rem = 12px, (12/16) * 100
-    font-size: 72%;
+  @include tab-port {
+    // 1rem = 8px, (8/16) * 100
+    font-size: 50%;
   }
 }
 
@@ -29,7 +29,7 @@ html {
   font-family: $primary-font;
   font-weight: 600;
   line-height: 100%;
-  letter-spacing: -4%;
+  letter-spacing: 0;
 }
 
 .heading-primary.bg {
@@ -69,8 +69,9 @@ html {
   font-family: $primary-font;
   font-weight: 600;
   line-height: 70.4px;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
   font-size: 6.4rem;
+  color: $brand-aubergine;
 }
 
 .heading-secondary.bg {
@@ -88,7 +89,7 @@ html {
 
 .heading-secondary.md {
   font-size: 6rem;
-  letter-spacing: -2%;
+  letter-spacing: 0;
 
   @include tab-land {
     font-size: 4.5rem;
@@ -104,8 +105,9 @@ html {
   font-family: $primary-font;
   font-weight: 600;
   line-height: 1;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
   line-height: 1.3;
+  color: $brand-aubergine;
 }
 
 .heading-tertiary.bg {
@@ -163,8 +165,9 @@ html {
   font-family: $primary-font;
   font-size: 1.6rem;
   line-height: 1.6;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
   font-weight: 500;
+  color: $secondary-color;
 }
 
 .paragraph.white {

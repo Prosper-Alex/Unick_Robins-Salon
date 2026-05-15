@@ -27,7 +27,7 @@ new Swiper(".service_image--wrapper", {
   breakpoints: {
     600: { slidesPerView: 1 },
     980: { slidesPerView: 3 },
-    1025: { slidesPerView: 5 },
+    1025: { slidesPerView: 4 },
   },
 });
 
@@ -64,6 +64,23 @@ window.addEventListener("scroll", () => {
   } else {
     nav.classList.remove("scrolled");
   }
+});
+
+document.querySelectorAll('.navigation a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const target = document.querySelector(link.getAttribute("href"));
+    const checkbox = document.getElementById("checkbox");
+
+    if (checkbox) {
+      checkbox.checked = false;
+    }
+
+    if (!target) return;
+
+    event.preventDefault();
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    history.pushState(null, "", link.getAttribute("href"));
+  });
 });
 
 const tabButtons = document.querySelectorAll(".tab-btn");
@@ -180,7 +197,7 @@ Thank you!
   `;
 
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${receiverPhoneNumber}&text=${encodeURIComponent(
-    message
+    message,
   )}`;
 
   window.open(whatsappUrl, "_blank");

@@ -5,7 +5,7 @@
   color: $accent-color;
   font-weight: 500;
   line-height: 18px;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
 
   @include sm-fsz;
 }
@@ -14,7 +14,7 @@
   @include sm-fsz;
   font-weight: 500;
   line-height: 18px;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,14 +72,14 @@
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 18px;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
 }
 .color-tx--rm {
   // color: $accent-color;
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 18px;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
 
   padding: 0.7rem;
   border-radius: $border-radius-rm;
@@ -90,5 +90,5 @@
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 18px;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
 }
