@@ -2,9 +2,11 @@
 new Swiper(".header_wrap", {
   loop: true,
   autoplay: { delay: 3000, disableOnInteraction: false },
-  pagination: { el: ".swiper-pagination", clickable: true },
-  navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-  scrollbar: { el: ".swiper-scrollbar" },
+  pagination: {
+    el: ".header_image--wrapper .swiper-pagination",
+    clickable: true,
+  },
+  scrollbar: { el: ".header_image--wrapper .swiper-scrollbar" },
 });
 
 // SERVICE SWIPER
@@ -16,14 +18,10 @@ new Swiper(".service_image--wrapper", {
   spaceBetween: 10,
   autoplay: { delay: 3000, disableOnInteraction: false },
   pagination: {
-    nextEl: ".pricing-button-next",
-    prevEl: ".pricing-button-prev",
-
+    el: ".service-pagination",
     clickable: true,
     dynamicBullets: true,
   },
-
-  navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
   breakpoints: {
     600: { slidesPerView: 1 },
     980: { slidesPerView: 3 },
@@ -33,12 +31,14 @@ new Swiper(".service_image--wrapper", {
 
 // TESTIMONIAL SWIPER
 new Swiper(".testimonial_blog", {
-  loop: true,
+  loop: false,
   grabCursor: true,
-  spaceBetween: 20,
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true,
+  },
+  spaceBetween: 1,
   slidesPerView: 1,
-  centeredSlides: true,
-  centeredSlidesBounds: true,
   watchOverflow: true,
   // autoplay: {
   //   delay: 3000,
@@ -98,26 +98,24 @@ tabButtons.forEach((btn) => {
   });
 });
 
-const pricingSwiper = new Swiper(".pricingSwiper", {
-  loop: true,
-  slidesPerView: 1,
-  spaceBetween: 20,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 1.2,
+document.querySelectorAll(".pricingSwiper").forEach((swiperElement) => {
+  new Swiper(swiperElement, {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+      el: swiperElement.querySelector(".swiper-pagination"),
+      clickable: true,
     },
-    1024: {
-      slidesPerView: 2,
+    breakpoints: {
+      768: {
+        slidesPerView: 1.2,
+      },
+      1024: {
+        slidesPerView: 2,
+      },
     },
-  },
+  });
 });
 // For Book an appointment
 const bookAppointmentForm = document.getElementById("bookAppointment");
@@ -135,11 +133,11 @@ const receiverPhoneNumber = "2348030897425"; // Your WhatsApp number
 
 let appointmentDetails = {};
 
-// Set minimum date to tomorrow in the date input
+// Set minimum date to two days ahead in the date input
 window.addEventListener("DOMContentLoaded", () => {
-  const tomorrow = new Date();
-  tomorrow.setDate(tomorrow.getDate() + 2);
-  const isoDate = tomorrow.toISOString().split("T")[0];
+  const minimumAppointmentDate = new Date();
+  minimumAppointmentDate.setDate(minimumAppointmentDate.getDate() + 2);
+  const isoDate = minimumAppointmentDate.toISOString().split("T")[0];
   dateValue.setAttribute("min", isoDate);
 });
 
@@ -159,12 +157,12 @@ bookAppointmentForm.addEventListener("submit", function (e) {
   }
 
   const selectedDate = new Date(date);
-  const tomorrow = new Date();
-  tomorrow.setHours(0, 0, 0, 0);
-  tomorrow.setDate(tomorrow.getDate() + 1); // Minimum valid date is tomorrow
+  const minimumAppointmentDate = new Date();
+  minimumAppointmentDate.setHours(0, 0, 0, 0);
+  minimumAppointmentDate.setDate(minimumAppointmentDate.getDate() + 2);
 
-  if (selectedDate < tomorrow) {
-    alert("Appointments must be scheduled at least a day in advance.");
+  if (selectedDate < minimumAppointmentDate) {
+    alert("Appointments must be scheduled at least two days in advance.");
     return;
   }
 

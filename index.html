@@ -30,7 +30,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   </head>
   <body>
-    <nav class="navigation center-children--sm" data-aos="fade-down">
+    <nav class="navigation center-children--sm">
       <input type="checkbox" id="checkbox" hidden />
       <figure class="nav_logo">
         <img src="./assets/logo/logo.jpg" alt="Logo" />
@@ -58,10 +58,10 @@
         <div class="header_wrap swiper">
           <div class="swiper-wrapper">
             <div class="header-img swiper-slide">
-              <img src="/assets/img/hero-1.jpeg" alt="Slider Image" />
+              <img src="./assets/img/hero-1.jpeg" alt="Slider Image" />
             </div>
             <div class="header-img swiper-slide">
-              <img src="/assets/img/hero-2.jpg" alt="Slider Image" />
+              <img src="./assets/img/hero-2.jpg" alt="Slider Image" />
             </div>
             <div class="header-img swiper-slide">
               <img src="./assets/img/hero-3.jpg" alt="Slider Image" />
@@ -123,7 +123,7 @@
               </figure>
 
               <i
-                class="fa-duotone fa-solid fa-x fa-flip-both"
+                class="fa-solid fa-x fa-flip-both"
                 style="
                   --fa-primary-color: #e6b479;
                   --fa-secondary-color: #e8aa64;
@@ -143,7 +143,7 @@
           <div class="service_image--wrap swiper-wrapper">
             <div class="service-card white-bg swiper-slide">
               <figure class="service-img">
-                <img src="/assets/img/service-1.jpg" alt="Slider Image" />
+                <img src="./assets/img/service-1.jpg" alt="Slider Image" />
               </figure>
 
               <div class="service-textbox">
@@ -167,7 +167,7 @@
             </div>
             <div class="service-card white-bg swiper-slide">
               <figure class="service-img">
-                <img src="/assets/img/service-2.jpg" alt="Slider Image" />
+                <img src="./assets/img/service-2.jpg" alt="Slider Image" />
               </figure>
 
               <div class="service-textbox">
@@ -191,7 +191,7 @@
             </div>
             <div class="service-card white-bg swiper-slide">
               <figure class="service-img">
-                <img src="/assets/img/service-3.jpg" alt="Slider Image" />
+                <img src="./assets/img/service-3.jpg" alt="Slider Image" />
               </figure>
 
               <div class="service-textbox">
@@ -215,7 +215,7 @@
             </div>
             <div class="service-card white-bg swiper-slide">
               <figure class="service-img">
-                <img src="/assets/img/service-4.jpg" alt="Slider Image" />
+                <img src="./assets/img/service-4.jpg" alt="Slider Image" />
               </figure>
 
               <div class="service-textbox">
@@ -239,7 +239,7 @@
             </div>
             <div class="service-card white-bg swiper-slide">
               <figure class="service-img">
-                <img src="/assets/img/service-5.jpg" alt="Slider Image" />
+                <img src="./assets/img/service-5.jpg" alt="Slider Image" />
               </figure>
 
               <div class="service-textbox">
@@ -263,7 +263,7 @@
             </div>
             <div class="service-card white-bg swiper-slide">
               <figure class="service-img">
-                <img src="/assets/img/service-6.jpg" alt="Slider Image" />
+                <img src="./assets/img/service-6.jpg" alt="Slider Image" />
               </figure>
 
               <div class="service-textbox">
@@ -287,7 +287,7 @@
             </div>
             <div class="service-card white-bg swiper-slide">
               <figure class="service-img">
-                <img src="/assets/img/service-7.jpg" alt="Slider Image" />
+                <img src="./assets/img/service-7.jpg" alt="Slider Image" />
               </figure>
 
               <div class="service-textbox">
@@ -325,7 +325,7 @@
             </figure>
 
             <i
-              class="fa-duotone fa-solid fa-x fa-flip-both"
+              class="fa-solid fa-x fa-flip-both"
               style="
                 --fa-primary-color: #e6b479;
                 --fa-secondary-color: #e8aa64;
@@ -422,7 +422,7 @@
             <img src="./assets/icons/scissors-left.svg" alt="scissor-icon" />
           </figure>
           <i
-            class="fa-duotone fa-scissors fa-flip-both"
+            class="fa-solid fa-scissors fa-flip-both"
             style="
               --fa-primary-color: #e6b479;
               --fa-secondary-color: #e8aa64;
@@ -467,6 +467,12 @@
                 <div class="pricing-card">
                   <h3>Locs Installation</h3>
                   <p class="price">₦40,000 – ₦50,000</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="pricing-card">
+                  <h3>Locs Combining</h3>
+                  <p class="price">₦50,000</p>
                 </div>
               </div>
             </div>
@@ -584,7 +590,7 @@
             </figure>
 
             <i
-              class="fa-duotone fa-solid fa-x fa-flip-both"
+              class="fa-solid fa-x fa-flip-both"
               style="
                 --fa-primary-color: #e6b479;
                 --fa-secondary-color: #e8aa64;
@@ -632,7 +638,7 @@
               </figure>
 
               <i
-                class="fa-duotone fa-solid fa-x fa-flip-both"
+                class="fa-solid fa-x fa-flip-both"
                 style="
                   --fa-primary-color: #e6b479;
                   --fa-secondary-color: #e8aa64;
@@ -649,62 +655,86 @@
         </div>
 
         <div class="testimonial_blog swiper">
-          <div class="testimonial_blog--wrapper swiper-wrapper">
-            <div class="test_blog swiper-slide">
-              <figure class="rate-icons">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </figure>
+          <ul class="testimonial_blog--wrapper swiper-wrapper">
+            <li class="test_blog swiper-slide">
+              <a
+                class="testimonial-link"
+                href="https://www.google.com/search?q=unick+robins&amp;sourceid=chrome&amp;ie=UTF-8"
+                target="_blank"
+                rel="noopener noreferrer">
+                <figure class="rate-icons">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </figure>
 
-              <h3 class="heading-tertiary md">Blessing Enike</h3>
+                <h3 class="heading-tertiary md">Blessing Enike</h3>
 
-              <p class="paragraph sm">A Wonderful Experience!</p>
-            </div>
+                <p class="paragraph sm">A Wonderful Experience!</p>
+              </a>
+            </li>
 
-            <div class="test_blog swiper-slide">
-              <figure class="rate-icons">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </figure>
+            <li class="test_blog swiper-slide">
+              <a
+                class="testimonial-link"
+                href="https://www.google.com/search?q=unick+robins&amp;sourceid=chrome&amp;ie=UTF-8"
+                target="_blank"
+                rel="noopener noreferrer">
+                <figure class="rate-icons">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </figure>
 
-              <h3 class="heading-tertiary md">Dozie Anowl</h3>
+                <h3 class="heading-tertiary md">Dozie Anowl</h3>
 
-              <p class="paragraph sm">Best In The Game 💯</p>
-            </div>
-            <div class="test_blog swiper-slide">
-              <figure class="rate-icons">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </figure>
+                <p class="paragraph sm">Best In The Game 💯</p>
+              </a>
+            </li>
+            <li class="test_blog swiper-slide">
+              <a
+                class="testimonial-link"
+                href="https://www.google.com/search?q=unick+robins&amp;sourceid=chrome&amp;ie=UTF-8"
+                target="_blank"
+                rel="noopener noreferrer">
+                <figure class="rate-icons">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </figure>
 
-              <h3 class="heading-tertiary md">William Chukwaemaka</h3>
+                <h3 class="heading-tertiary md">William Chukwaemaka</h3>
 
-              <p class="paragraph sm">Best Service ❤️</p>
-            </div>
+                <p class="paragraph sm">Best Service ❤️</p>
+              </a>
+            </li>
 
-            <div class="test_blog swiper-slide">
-              <figure class="rate-icons">
-                <img src="/assets/icons/Vector.svg" alt="rating-icon" />
-                <img src="/assets/icons/Vector.svg" alt="rating-icon" />
-                <img src="/assets/icons/Vector.svg" alt="rating-icon" />
-                <img src="/assets/icons/Vector.svg" alt="rating-icon" />
-                <img src="/assets/icons/Vector.svg" alt="rating-icon" />
-              </figure>
+            <li class="test_blog swiper-slide">
+              <a
+                class="testimonial-link"
+                href="https://www.google.com/search?q=unick+robins&amp;sourceid=chrome&amp;ie=UTF-8"
+                target="_blank"
+                rel="noopener noreferrer">
+                <figure class="rate-icons">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </figure>
 
-              <h3 class="heading-tertiary">Anuoluwapo Lucky</h3>
+                <h3 class="heading-tertiary md">Anuoluwapo Lucky</h3>
 
-              <p class="paragraph sm">Legit and Cool 😎</p>
-            </div>
-          </div>
+                <p class="paragraph sm">Legit and Cool 😎</p>
+              </a>
+            </li>
+          </ul>
 
           <div class="swiper-button-next testimonial_blog--btn"></div>
           <div class="swiper-button-prev testimonial_blog--btn"></div>
@@ -715,7 +745,7 @@
     </section>
 
     <section class="member">
-      <div class="member_content center_children--bg">
+      <div class="member_content center-children--bg">
         <div class="textbox">
           <h3 class="heading-tertiary md">Want to be a member? Join with us</h3>
         </div>
@@ -742,7 +772,7 @@
               </figure>
 
               <i
-                class="fa-duotone fa-solid fa-x fa-flip-both"
+                class="fa-solid fa-x fa-flip-both"
                 style="
                   --fa-primary-color: #e6b479;
                   --fa-secondary-color: #e8aa64;
@@ -776,9 +806,9 @@
           </div>
 
           <div class="contact_info">
-            <a href="mailto:contact@gmail.com">
+            <a href="mailto:unickrobins@gmail.com">
               <figure class="info-logo">
-                <img src="/assets/icons/email-icon.svg" alt="email-icon" />
+                <img src="./assets/icons/email-icon.svg" alt="email-icon" />
               </figure>
             </a>
             <h3 class="heading-tertiary accent-color sm">Email us</h3>
@@ -838,7 +868,7 @@
             </figure>
 
             <i
-              class="fa-duotone fa-solid fa-x fa-flip-both"
+              class="fa-solid fa-x fa-flip-both"
               style="
                 --fa-primary-color: #e6b479;
                 --fa-secondary-color: #e8aa64;
@@ -871,11 +901,9 @@
             Subscribe for the latest hair care tips, trends, and updates from
             Unick Robins.
           </p>
-          <form class="subscribe_form">
+          <form class="subscribe_form" action="mailto:unickrobins@gmail.com">
             <input type="email" placeholder="Enter your email" />
-            <a href="mailto:unickrobins@gmail.com"
-              ><button type="submit"><i class="fas fa-paper-plane"></i></button
-            ></a>
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
           </form>
           <div class="social_icons">
             <a
@@ -887,7 +915,7 @@
             </a>
 
             <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-              <i class="fab fa-in"></i>
+              <i class="fab fa-linkedin-in"></i>
             </a>
             <a
               href="https://g.co/kgs/hZoJPhS"

@@ -103,7 +103,9 @@
   &_img {
     height: 60vh;
     width: 100%;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
 
     &:hover {
       transform: translateY(-5px);
@@ -319,13 +321,15 @@
 .testimonial {
   background:
     linear-gradient(rgba(249, 240, 255, 0.9), rgba(253, 240, 248, 0.92)),
-    url(/assets/img/testimonial-bg.jpg);
+    url(../assets/img/testimonial-bg.jpg);
   background-size: cover;
   background-position: center;
   height: 65rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  isolation: isolate;
+  clear: both;
   position: relative;
   color: $brand-aubergine;
   padding: 4rem;
@@ -368,15 +372,18 @@
   }
 
   &_blog {
-    display: flex;
     width: min(100%, 46rem);
     max-width: 100vw;
     margin: 0 auto;
+    padding: 0 0 4rem;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
 
     @include phone {
       width: 100%;
       box-sizing: border-box;
-      padding: 0 3.6rem 3rem;
+      padding: 0 0 3rem;
     }
 
     .testimonial-pagination {
@@ -391,21 +398,6 @@
       justify-content: center;
       width: 100%;
       overflow: visible;
-
-      &:hover {
-        width: 1.2rem;
-        height: 1.2rem;
-        background-color: $accent-color;
-        opacity: 0.5;
-        border-radius: 50%;
-        transition: all 0.3s ease;
-      }
-
-      :active {
-        background-color: $accent-gold-bright;
-        opacity: 1;
-        transform: scale(1.3);
-      }
     }
 
     .testimonial-pagination {
@@ -434,7 +426,8 @@
   }
 
   .testimonial_blog--wrapper {
-    align-items: center;
+    align-items: stretch;
+    padding: 0;
 
     .test_blog {
       display: flex;
@@ -443,20 +436,68 @@
       justify-content: center;
       gap: 1.5rem;
       text-align: center;
-      margin: 4rem 0;
+      margin: 2.5rem 0 3.5rem;
       position: relative;
       z-index: 10;
+      min-height: 24rem;
+      padding: 3rem 2.6rem;
+      overflow: hidden;
+      border: 1px solid rgba(214, 178, 94, 0.35);
+      border-radius: 1.2rem;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255, 248, 240, 0.95),
+          rgba(251, 248, 251, 0.86)
+        ),
+        rgba(255, 248, 240, 0.88);
+      box-shadow: 0 1.8rem 4rem rgba(26, 8, 36, 0.14);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+
+      &.swiper-slide-active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
+      &::before {
+        content: "“";
+        position: absolute;
+        top: 0.6rem;
+        left: 1.6rem;
+        color: rgba(214, 178, 94, 0.2);
+        font-size: 8rem;
+        line-height: 1;
+        font-weight: 700;
+      }
+
+      .testimonial-link {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        width: 100%;
+        min-height: inherit;
+        color: inherit;
+      }
 
       @include phone {
         width: 100%;
         max-width: none;
         min-height: 23rem;
-        margin: 1.5rem auto;
+        margin: 1.5rem auto 2.5rem;
         padding: 2rem 1.6rem;
         box-sizing: border-box;
-        border: 1px solid rgba(214, 178, 94, 0.28);
-        border-radius: $border-radius-sm;
-        background-color: rgba(255, 248, 240, 0.72);
+        border-radius: 1.2rem;
+        background-color: rgba(255, 248, 240, 0.84);
         box-shadow: 0 1.4rem 3rem rgba(26, 8, 36, 0.1);
       }
 
@@ -477,6 +518,10 @@
         display: flex;
         align-items: center;
         gap: 0.5rem;
+        padding: 0.65rem 1rem;
+        border: 1px solid rgba(214, 178, 94, 0.28);
+        border-radius: 999px;
+        background-color: rgba(246, 231, 183, 0.42);
 
         @include big-phone {
           color: $accent-color;
@@ -485,7 +530,9 @@
         i {
           font-size: 1.4rem;
           cursor: pointer;
-          transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+          transition:
+            color 0.3s ease-in-out,
+            transform 0.3s ease-in-out;
 
           &:hover {
             color: $accent-color;
@@ -520,27 +567,29 @@
       }
 
       &.swiper-button-next {
+        right: 1rem;
         animation: bounce-horizontal 1.5s ease-in-out infinite;
 
         @include phone {
-          right: 0.5rem;
+          right: 0.8rem;
         }
 
         @include bg-desktop {
-          margin-right: 2rem;
+          margin-right: 0;
         }
       }
 
       &.swiper-button-prev {
+        left: 1rem;
         animation: bounce-horizontal 1.5s ease-in-out infinite;
         animation-direction: alternate-reverse;
 
         @include phone {
-          left: 0.5rem;
+          left: 0.8rem;
         }
 
         @include bg-desktop {
-          margin-left: 2rem;
+          margin-left: 0;
         }
       }
     }
@@ -634,7 +683,7 @@
 .pricing-section {
   background:
     linear-gradient(rgba(26, 8, 36, 0.84), rgba(36, 16, 47, 0.84)),
-    url(/assets/img/testimonial-bg.jpg) center / cover no-repeat;
+    url(../assets/img/testimonial-bg.jpg) center / cover no-repeat;
   background-size: cover;
   display: flex;
   background-position: center;
@@ -883,7 +932,11 @@
     text-align: left;
     padding: 3rem;
     background:
-      linear-gradient(180deg, rgba(255, 248, 223, 0.72), rgba(251, 248, 251, 0.98)),
+      linear-gradient(
+        180deg,
+        rgba(255, 248, 223, 0.72),
+        rgba(251, 248, 251, 0.98)
+      ),
       $surface-card;
     border: 1px solid $border-gold;
     border-radius: $border-radius-sm;
@@ -1149,7 +1202,7 @@
 .contact {
   background:
     linear-gradient(rgba(26, 8, 36, 0.76), rgba(36, 16, 47, 0.72)),
-    url(/assets/img/contact-img.jpg) center / cover no-repeat;
+    url(../assets/img/contact-img.jpg) center / cover no-repeat;
   background-size: cover;
   display: flex;
   background-position: center;
