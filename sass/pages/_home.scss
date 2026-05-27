@@ -4,11 +4,9 @@
 //  ABOUT SECTION
 
 .about {
-  margin: 15rem 0;
   background-color: $surface-blush;
 
   @include phone {
-    margin: 4rem 1.2rem;
     padding: 4rem 1.6rem;
     border: 1px solid $border-gold;
     border-radius: $border-radius-sm;
@@ -135,11 +133,9 @@
 // SECTION SERVICE
 
 .service {
-  margin: 15rem 0;
   background-color: $surface-lavender;
 
   @include phone {
-    margin: 4rem 1.2rem;
     border: 1px solid $border-gold;
     border-radius: $border-radius-sm;
     overflow: hidden;
@@ -333,12 +329,10 @@
   position: relative;
   color: $brand-aubergine;
   padding: 4rem;
-  margin: 10rem 0;
 
   @include phone {
     height: auto;
     min-height: auto;
-    margin: 4rem 1.2rem;
     padding: 3.2rem 1.2rem;
     border: 1px solid $border-gold;
     border-radius: $border-radius-sm;
@@ -598,12 +592,7 @@
 
 // TEAM SECTION
 .team {
-  margin: 15rem 0;
   text-align: center;
-
-  @include phone {
-    margin: 4rem 1.2rem;
-  }
 
   &_wrapper {
     display: flex;
@@ -692,13 +681,11 @@
   justify-content: space-around;
   color: $white;
   padding: 6rem 2rem;
-  margin: 15rem 0;
   height: 100%;
 
   @include phone {
     display: flex;
     justify-content: center;
-    margin: 4rem 1.2rem;
     padding: 4rem 1.6rem;
     border: 1px solid $border-gold;
     border-radius: $border-radius-sm;
@@ -896,7 +883,6 @@
   text-align: center;
 
   @include phone {
-    margin: 4rem 1.2rem;
     padding: 4rem 1.6rem;
     border: 1px solid $border-gold;
     border-radius: $border-radius-sm;
@@ -1132,7 +1118,6 @@
 // SECTION MEMBER
 
 .member {
-  margin: 8rem 0 0;
   padding: 5rem;
   background-color: $primary-color;
   border-top: 1px solid $border-gold;
@@ -1143,7 +1128,6 @@
   }
 
   @include phone {
-    margin: 4rem 1.2rem 0;
     border-radius: $border-radius-sm $border-radius-sm 0 0;
   }
   &_content {
@@ -1211,13 +1195,11 @@
   justify-content: space-around;
   color: $white;
   padding: 6rem 2rem;
-  margin: 0 0 8rem;
   height: 100%;
 
   @include phone {
     display: flex;
     justify-content: center;
-    margin: 0 1.2rem 4rem;
     padding: 4rem 1.6rem;
     border-radius: 0 0 $border-radius-sm $border-radius-sm;
     overflow: hidden;
@@ -1319,7 +1301,6 @@
 // SECTION MAP SECTION
 
 .map-section {
-  margin: 10rem 0;
   display: flex;
   align-items: center;
   width: 100%;
@@ -1327,7 +1308,6 @@
   filter: saturate(85%) brightness(98%);
 
   @include phone {
-    margin: 4rem 1.2rem;
     width: auto;
     height: auto;
     padding: 1.2rem !important;

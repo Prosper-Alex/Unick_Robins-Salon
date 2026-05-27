@@ -1,6 +1,34 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/variables" as *;
 
+$section-gap-desktop: 16rem;
+$section-gap-mobile: 6rem;
+$section-gap-desktop-sm: 12rem;
+
+.section-spacing {
+  margin: $section-gap-desktop 0;
+
+  @include phone {
+    margin: $section-gap-mobile 1.2rem;
+  }
+}
+
+.section-spacing--top {
+  margin: $section-gap-desktop-sm 0 0;
+
+  @include phone {
+    margin: $section-gap-mobile 1.2rem 0;
+  }
+}
+
+.section-spacing--bottom {
+  margin: 0 0 $section-gap-desktop-sm;
+
+  @include phone {
+    margin: 0 1.2rem $section-gap-mobile;
+  }
+}
+
 .center-children--bg {
   padding-left: 8vw !important;
   padding-right: 8vw !important;
